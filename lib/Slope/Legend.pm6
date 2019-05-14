@@ -12,10 +12,10 @@ use Slope::Raw::Legend;
 use Slope::Item;
 
 our subset LegendAncestry is export of Mu
-  where SlopeLegend | ItemAncestry;
+  where SlopeLegend | SlopeItemAncestry;
 
 class Slope::Legend is Slope::Item {
-  has SlopeLegend $!l
+  has SlopeLegend $!l;
 
   submethod BUILD (:$legend) {
     my $to-parent;
@@ -40,10 +40,10 @@ class Slope::Legend is Slope::Item {
   { $!l }
 
   multi method new (LegendAncestry $legend) {
-    self.bless (:$legend);
+    self.bless( :$legend );
   }
   multi method new (Int() $orientation) {
-    my guint $o = resolve-int($orientation)
+    my guint $o = resolve-int($orientation);
     self.bless( legend => slope_legend_new($o) );
   }
 
@@ -76,7 +76,7 @@ class Slope::Legend is Slope::Item {
         SlopeOrientation( slope_legend_get_orientation($!l) );
       },
       STORE => sub ($, Int() $orientation is copy) {
-        my guint $o = resolve-uint($o);
+        my guint $o = resolve-uint($orientation);
         slope_legend_set_orientation($!l, $o);
       }
     );

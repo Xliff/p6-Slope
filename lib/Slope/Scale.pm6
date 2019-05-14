@@ -1,5 +1,7 @@
 use v6.c;
 
+use Method::Also;
+
 use GTK::Compat::Types;
 use Slope::Raw::Types;
 
@@ -7,13 +9,16 @@ use Slope::Raw::Scale;
 
 use GTK::Compat::Roles::Object;
 
+our subset SlopeScaleAncestry is export of Mu
+  where SlopeScale | GObject;
+
 class Slope::Scale {
   also does GTK::Compat::Roles::Object;
 
   has SlopeScale $!s;
 
   submethod BUILD (:$scale) {
-    self!setObjet( cast(GObject, $!s = $scale) );
+    self!setObject( cast(GObject, $!s = $scale) );
   }
 
   method new (SlopeScale $scale) {

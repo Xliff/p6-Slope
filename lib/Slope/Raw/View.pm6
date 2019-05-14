@@ -1,5 +1,7 @@
 use v6.c;
 
+use NativeCall;
+
 use GTK::Compat::Types;
 use Slope::Raw::Types;
 
@@ -38,7 +40,7 @@ sub slope_view_write_to_png (
   is export
   { * }
 
-sub slope_view_get_figure (SlopeFigure $self)
+sub slope_view_get_figure (SlopeView $self)
   returns SlopeFigure
   is native(slope)
   is export

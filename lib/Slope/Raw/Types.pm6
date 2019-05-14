@@ -9,42 +9,42 @@ use GTK::Roles::Pointers;
 
 unit package Slope::Raw::Types;
 
-our subset CairoObject of Mu where Cairo::Context | cairo_t;
+our subset CairoObject is export of Mu where Cairo::Context | cairo_t;
+
+constant slope is export = 'slope',v0;
 
 constant SlopeColor is export := guint32;
 
-class SlopeChart       is repr("CPointer") does GTK::Roles::Pointers is export { }
-class SlopeFigure      is repr("CPointer") does GTK::Roles::Pointers is export { }
-class SlopeItem        is repr("CPointer") does GTK::Roles::Pointers is export { }
-class SlopeLegend      is repr("CPointer") does GTK::Roles::Pointers is export { }
-class SlopeSampler     is repr("CPointer") does GTK::Roles::Pointers is export { }
-class SlopeScale       is repr("CPointer") does GTK::Roles::Pointers is export { }
-class SlopeView        is repr("CPointer") does GTK::Roles::Pointers is export { }
-class SlopeXyAxis      is repr("CPointer") does GTK::Roles::Pointers is export { }
-class SlopeXyScale     is repr("CPointer") does GTK::Roles::Pointers is export { }
-class SlopeXyScaleAxis is repr("CPointer") does GTK::Roles::Pointers is export { }
-class SlopeXySeries    is repr("CPointer") does GTK::Roles::Pointers is export { }
+class SlopeChart       is repr('CPointer') does GTK::Roles::Pointers is export { }
+class SlopeFigure      is repr('CPointer') does GTK::Roles::Pointers is export { }
+class SlopeItem        is repr('CPointer') does GTK::Roles::Pointers is export { }
+class SlopeLegend      is repr('CPointer') does GTK::Roles::Pointers is export { }
+class SlopeScale       is repr('CPointer') does GTK::Roles::Pointers is export { }
+class SlopeView        is repr('CPointer') does GTK::Roles::Pointers is export { }
+class SlopeXyAxis      is repr('CPointer') does GTK::Roles::Pointers is export { }
+class SlopeXyScale     is repr('CPointer') does GTK::Roles::Pointers is export { }
+class SlopeXySeries    is repr('CPointer') does GTK::Roles::Pointers is export { }
 
-class SlopePoint is repr('CStruct') is export also does GTK::Roles::Pointers {
+class SlopePoint is repr('CStruct') does GTK::Roles::Pointers is export {
   has gdouble $.x is rw;
   has gdouble $.y is rw;
 }
 
-class SlopeRect  is repr('CStruct') is export also does GTK::Roles::Pointers {
+class SlopeRect  is repr('CStruct') does GTK::Roles::Pointers is export {
   has gdouble $.x      is rw;
   has gdouble $.y      is rw;
   has gdouble $.width  is rw;
   has gdouble $.height is rw;
 }
 
-class SlopeMouseEvent is repr('CStruct') is export also does GTK::Roles::Pointers {
+class SlopeMouseEvent is repr('CStruct') does GTK::Roles::Pointers is export {
   has gdouble $.x      is rw;
   has gdouble $.y      is rw;
   has guint32 $.button is rw;
   has guint32 $.type   is rw;
 }
 
-class SlopeSample     is repr('CStruct') is export also does GTK::Roles::Pointers {
+class SlopeSample     is repr('CStruct') does GTK::Roles::Pointers is export {
   has gdouble $.coord is rw;
   has Str     $!label;
 
@@ -62,7 +62,7 @@ class SlopeSample     is repr('CStruct') is export also does GTK::Roles::Pointer
   }
 }
 
-class SlopeSampler {
+class SlopeSampler is repr('CStruct') does GTK::Roles::Pointers is export {
   has GList   $!sample_list;
   has guint32 $.mode is rw;
   has gdouble $.min  is rw;
@@ -190,10 +190,10 @@ our enum SlopeColors is export (
   SLOPE_PALETURQUOISE  => 0xAFEEEEFF
 );
 
-sub SLOPE_GET_RED(\color)    { color +> 24) +& 0xFF }
-sub SLOPE_GET_GREEN(\color)  { color +> 16) +& 0xFF }
-sub SLOPE_GET_BLUE(\color)   { color +>  8) +& 0xFF }
-sub SLOPE_GET_ALPHA(\color)  { color        +& 0xFF }
+sub SLOPE_GET_RED(\color)    { (color +> 24) +& 0xFF }
+sub SLOPE_GET_GREEN(\color)  { (color +> 16) +& 0xFF }
+sub SLOPE_GET_BLUE(\color)   { (color +>  8) +& 0xFF }
+sub SLOPE_GET_ALPHA(\color)  {  color        +& 0xFF }
 sub SLOPE_GET_REDF(\color)   { SLOPE_GET_RED(color).Num   / 255.0 }
 sub SLOPE_GET_GREENF(\color) { SLOPE_GET_GREEN(color).Num / 255.0 }
 sub SLOPE_GET_BLUEF(\color)  { SLOPE_GET_BLUE(color).Num  / 255.0 }
@@ -202,8 +202,8 @@ sub SLOPE_GET_ALPHAF(\color) { SLOPE_GET_ALPHA(color).Num / 255.0 }
 sub SLOPE_SET_RED(\color, \red)     { color = (color +& 0x00FFFFFF) +| ((red   +& 0xFF) +< 24) }
 sub SLOPE_SET_GREEN(\color, \green) { color = (color +& 0xFF00FFFF) +| ((green +& 0xFF) +< 16) }
 sub SLOPE_SET_BLUE(\color, \blue)   { color = (color +& 0xFFFF00FF) +| ((blue  +& 0xFF) +< 8)  }
-sub SLOPE_SET_ALPHA(color, alpha)   { color = (color +& 0xFFFFFF00) +| (alpha  +& 0xFF)        }
-sub SLOPE_COLOR(\r, \g, \b, \a)     { ((r +& 0xFF) +< 24) +| ((g +& 0xFF) << 16) +| ((b +& 0xFF) << 8) +| (a +& 0xFF) }
+sub SLOPE_SET_ALPHA(\color, \alpha) { color = (color +& 0xFFFFFF00) +| (alpha  +& 0xFF)        }
+sub SLOPE_COLOR(\r, \g, \b, \a)     { ((r +& 0xFF) +< 24) +| ((g +& 0xFF) +< 16) +| ((b +& 0xFF) +< 8) +| (a +& 0xFF) }
 sub SLOPE_COLOR_IS_NULL(\color)     { SLOPE_GET_ALPHA(color) == 0 }
 sub SLOPE_GRAY(\value)              { SLOPE_COLOR(value, value, value, 0xFF) }
 

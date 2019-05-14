@@ -1,15 +1,23 @@
 use v6.c;
 
+use Method::Also;
+
 use GTK::Compat::Types;
 use Slope::Raw::Types;
+
+use GTK::Raw::Utils;
 
 use Slope::Raw::Item;
 
 use GTK::Compat::Roles::Object;
+use GTK::Compat::Roles::ListData;
 use GTK::Roles::Protection;
 
 use Slope::Figure;
 use Slope::Scale;
+
+our subset SlopeItemAncestry is export of Mu
+  where SlopeItem | GObject;
 
 class Slope::Item {
   also does GTK::Compat::Roles::Object;
@@ -102,7 +110,9 @@ class Slope::Item {
     $raw ??
       $l.Array
       !!
-      ($l but ListData[SlopeItem]).Array.map({ Slope::Item.new( $_ ) });
+      ($l but GTK::Compat::Roles::ListData[SlopeItem])
+        .Array
+        .map({ Slope::Item.new( $_ ) });
   }
 
   method get_type is also<get-type> {
@@ -115,4 +125,3 @@ class Slope::Item {
   }
 
 }
-

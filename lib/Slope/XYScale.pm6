@@ -1,13 +1,17 @@
 use v6.c;
 
+use Method::Also;
+
 use GTK::Compat::Types;
-use Slope::Raw:Types;
+use Slope::Raw::Types;
+
+use GTK::Raw::Utils;
 
 use Slope::Raw::XYScale;
 
 use Slope::Scale;
 
-our XYScaleAncestry is export of Mu
+our subset XYScaleAncestry is export of Mu
   where SlopeXyScale | SlopeScaleAncestry;
 
 class Slope::XYScale is SlopeScale {

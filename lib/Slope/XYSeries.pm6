@@ -1,23 +1,26 @@
 use v6.c;
 
 use Method::Also;
+use NativeCall;
 
 use GTK::Compat::Types;
 use Slope::Raw::Types;
 
 use GTK::Raw::Utils;
 
+use Slope::Raw::XYSeries;
+
 use Slope::Item;
 
-our XYSeriesAncestry is export of Mu
-  where SlopeXySeries | ItemAncestry;
+our subset XYSeriesAncestry is export of Mu
+  where SlopeXySeries | SlopeItemAncestry;
 
 class Slope::XYSeries is Slope::Item {
   has SlopeXySeries $!xys;
 
   submethod BUILD (:$series) {
     my $to-parent;
-    $!xys = do given $legend {
+    $!xys = do given $series {
       when SlopeXySeries {
         $to-parent = cast(SlopeItem, $_);
         $_;
@@ -41,41 +44,84 @@ class Slope::XYSeries is Slope::Item {
     self.bless(:$series);
   }
   multi method new {
-    self.bless( series => slope_xyscale_new() );
+    self.bless( series => slope_xyseries_new() );
   }
 
-  method get_axis (Int() $axis_id) is also<get-axis> {
-    my gint $ai = resolve-int($axis_id);
-    slope_xyscale_get_axis($!xys, $ai);
+  method !xy_to_vec ( @xy where *.elems == 2 ) {
+    my ($x_vec, $y_vec) = CArray[gdouble].new xx 2;
+    my glong $np = @xy.elems;
+    ($x_vec[$_], $y_vec[$_]) = |@xy[$_] for ^$np;
+    ($x_vec, $y_vec, $np);
+  }
+  method !x_and_y_to_vec (@x, @y) {
+    my ($x_vec, $y_vec) = CArray[gdouble].new xx 2;
+    my glong $np = (@x.elems, @y.elems).min;
+    ($x_vec[$_], $y_vec[$_]) = (@x[$_], @y[$_]) for ^$np;
+    ($x_vec, $y_vec, $np);
   }
 
-  method get_type is also<get-type> {
+  multi method new_filled (
+    Str() $name,
+    @xy,
+    Str() $style
+  ) {
+    samewith($name, |self!xy_to_vec(@xy), $style);
+  }
+  multi method new_filled (Str() $name, @x, @y, Str() $style) {
+    samewith($name, |self!x_and_y_to_vec(@x, @y), $style);
+  }
+  multi method new_filled (
+    Str() $name,
+    CArray[gdouble] $x_vec,
+    CArray[gdouble] $y_vec,
+    Int() $n_pts,
+    Str() $style
+  ) {
+    my glong $np = resolve-int64($n_pts);
+    slope_xyseries_new_filled($name, $x_vec, $y_vec, $np, $style);
+  }
+
+  method get_type {
     state ($n, $t);
-    unstable_get_type( self.^name, &slope_xyscale_get_type, $n, $t );
+    unstable_get_type( self.^name, &slope_xyseries_get_type, $n, $t);
   }
 
-  method new_axis (Str() $y_title, Str() $top_title) is also<new-axis> {
-    slope_xyscale_new_axis($!xys, $y_title, $top_title);
+  multi method set_data(@xy) {
+    samewith( |self!xy_to_vec(@xy) )
+  }
+  multi method set_data(@x, @y) {
+    samewith( |self!x_and_y_to_vec(@x, @y) )
+  }
+  multi method set_data (
+    CArray[gdouble] $x_vec,
+    CArray[gdouble] $y_vec,
+    Int() $n_pts
+  ) {
+    my glong $np = resolve-int64($n_pts);
+    slope_xyseries_set_data($!xys, $x_vec, $y_vec, $np);
   }
 
-  method set_axis (Int() $axis_flag) is also<set-axis> {
-    my gint $af = resolve-int($axis_flag);
-    slope_xyscale_set_axis($!xys, $af);
+  method set_style (Str() $style) {
+    slope_xyseries_set_style($!xys, $style);
   }
 
-  method set_interaction (Int() $interaction) is also<set-interaction> {
-    my gint $i = resolve-int($interaction);
-    slope_xyscale_set_interaction($!xys, $i);
+  method update {
+    slope_xyseries_update($!xys);
   }
 
-  method set_x_range (Num() $min, Num() $max) is also<set-x-range> {
-    my gdouble ($mn, $mx) = ($min, $max);
-    slope_xyscale_set_x_range($!xys, $mn, $mx);
+  multi method update_data(@xy) {
+    samewith( self!xy_to_vec(@xy) );
   }
-
-  method set_y_range (Num() $min, Num() $max) is also<set-y-range> {
-    my gdouble ($mn, $mx) = ($min, $max);
-    slope_xyscale_set_y_range($!xys, $mn, $mx);
+  multi method update_data(@x, @y) {
+    samewith( self!x_and_y_to_vec(@x, @y) );
+  }
+  multi method update_data (
+    CArray[gdouble] $x_vec,
+    CArray[gdouble] $y_vec,
+    Int() $n_pts
+  ) {
+    my glong $np = resolve-int64($n_pts);
+    slope_xyseries_update_data($!xys, $x_vec, $y_vec, $np);
   }
 
 }

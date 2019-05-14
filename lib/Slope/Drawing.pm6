@@ -2,6 +2,8 @@ use v6.c;
 
 use Cairo;
 
+use Method::Also;
+
 use GTK::Compat::Types;
 use Slope::Raw::Types;
 
@@ -23,7 +25,7 @@ class Slope::Drawing {
     >
   { $!d }
 
-  method new (CairoObject $c is copy {
+  method new (CairoObject $c is copy) {
     $c .= Context if $c ~~ Cairo::Context;
     self.bless( cairo => $c );
   }

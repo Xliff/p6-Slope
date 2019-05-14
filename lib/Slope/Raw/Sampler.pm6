@@ -1,5 +1,7 @@
 use v6.c;
 
+use NativeCall;
+
 use GTK::Compat::Types;
 use Slope::Raw::Types;
 
@@ -58,11 +60,11 @@ sub slope_sampler_set_samples (
   { * }
 
 our constant MONTH_SAMPLES is export = 12;
-our $slope_sampler_month_samples_array := cglobal(
+our $slope_sampler_month_samples_array is export := cglobal(
   slope, 'slope_sampler_month_samples_array', Pointer
 );
 
 our constant PI_SAMPLES    is export = 21;
-our $slope_sampler_pi_samples_array := cglobal(
+our $slope_sampler_pi_samples_array is export := cglobal(
   slope, 'slope_sampler_pi_samples_array', Pointer
 );

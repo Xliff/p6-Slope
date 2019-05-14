@@ -2,21 +2,30 @@ use v6.c;
 
 use Cairo;
 
+use Method::Also;
+
 use GTK::Compat::Types;
 use Slope::Raw::Types;
+
+use GTK::Raw::Utils;
 
 use Slope::Raw::Figure;
 
 use GTK::Compat::Roles::Object;
 
 class Slope::Figure {
+  also does GTK::Compat::Roles::Object;
+
   has SlopeFigure $!f;
 
   submethod BUILD (:$figure) {
     self!setObject($!f = $figure);
   }
 
-  method new {
+  multi method new (SlopeFigure $figure) {
+    self.bless( :$figure );
+  }
+  multi method new {
     self.bless( figure => slope_figure_new() );
   }
 
@@ -54,7 +63,7 @@ class Slope::Figure {
   }
 
   method draw (SlopeRect $rect, CairoObject $cr is copy) {
-    $cr .= Context if $crt ~~ Cairo::Context;
+    $cr .= Context if $cr ~~ Cairo::Context;
     slope_figure_draw($!f, $rect, $cr);
   }
 

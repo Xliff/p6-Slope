@@ -1,11 +1,13 @@
 use v6.c;
 
+use NativeCall;
+
 use GTK::Compat::Types;
 use Slope::Raw::Types;
 
 unit package Slope::Raw::XYScale;
 
-sub slope_xyscale_get_axis (SlopeXyScale $self, int $axis_id)
+sub slope_xyscale_get_axis (SlopeXyScale $self, gint $axis_id)
   returns SlopeItem
   is native(slope)
   is export

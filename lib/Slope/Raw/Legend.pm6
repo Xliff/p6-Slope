@@ -1,5 +1,7 @@
 use v6.c;
 
+use NativeCall;
+
 use GTK::Compat::Types;
 use Slope::Raw::Types;
 
@@ -48,7 +50,7 @@ sub slope_legend_set_position (SlopeLegend $self, gdouble $x, gdouble $y)
   { * }
 
 sub slope_legend_get_anchor (SlopeLegend $self)
-  returns SlopeCorner
+  returns uint32 # SlopeCorner
   is native(slope)
   is export
   { * }
@@ -77,7 +79,10 @@ sub slope_legend_get_stroke_width (SlopeLegend $self)
   is export
   { * }
 
-sub slope_legend_set_anchor (SlopeLegend $self, SlopeCorner $anchor)
+sub slope_legend_set_anchor (
+  SlopeLegend $self,
+  uint32 $corner # SlopeCorner $anchor
+)
   is native(slope)
   is export
   { * }

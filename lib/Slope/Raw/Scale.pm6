@@ -1,5 +1,7 @@
 use v6.c;
 
+use NativeCall;
+
 use GTK::Compat::Types;
 use Slope::Raw::Types;
 
@@ -124,7 +126,7 @@ sub slope_scale_get_is_visible (SlopeScale $self)
   { * }
 
 sub slope_scale_get_name (SlopeScale $self)
-  returns char
+  returns Str
   is native(slope)
   is export
   { * }

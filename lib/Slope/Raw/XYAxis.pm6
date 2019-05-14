@@ -1,5 +1,7 @@
 use v6.c;
 
+use NativeCall;
+
 use GTK::Compat::Types;
 use Slope::Raw::Types;
 
@@ -17,7 +19,7 @@ sub slope_xyaxis_get_type ()
   is export
   { * }
 
-sub slope_xyaxis_new (int $orientation, Str $title)
+sub slope_xyaxis_new (gint $orientation, Str $title)
   returns SlopeItem
   is native(slope)
   is export

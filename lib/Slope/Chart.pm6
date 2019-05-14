@@ -8,6 +8,8 @@ use Slope::Raw::Types;
 
 use GTK::Raw::Utils;
 
+use Slope::Raw::Chart;
+
 use GTK::Window;
 use GTK::Widget;
 
@@ -25,16 +27,18 @@ class Slope::Chart is GTK::Window {
   }
 
   submethod BUILD (:$chart) {
-    self.setWindow( cast(GtkWindow, $!c = $chart) ;
+    self.setWindow( cast(GtkWindow, $!c = $chart) );
   }
 
   method new {
     self.bless( chart => slope_chart_new() );
   }
 
-  method new_detailed (Int() $width, Int() $height) is also<new-detailed> {
+  method new_detailed (Str() $title, Int() $width, Int() $height)
+    is also<new-detailed>
+  {
     my gint ($w, $h) = resolve-int($width, $height);
-    self.bless( chart => slope_chart_new_detailed($!c, $width, $height) );
+    self.bless( chart => slope_chart_new_detailed($title, $width, $height) );
   }
 
   method add_scale (SlopeScale $scale) is also<add-scale> {
