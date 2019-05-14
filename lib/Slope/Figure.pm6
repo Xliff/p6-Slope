@@ -7,24 +7,26 @@ use Slope::Raw::Types;
 
 use Slope::Raw::Figure;
 
+use GTK::Compat::Roles::Object;
+
 class Slope::Figure {
   has SlopeFigure $!f;
-  
+
   submethod BUILD (:$figure) {
-    $!f = $figufe;
+    self!setObject($!f = $figure);
   }
-  
+
   method new {
     self.bless( figure => slope_figure_new() );
   }
-  
+
   method Slope::Raw::Types::SlopeFigure
     is also<
       SlopeFigure
       Figure
     >
   { $!f }
-    
+
   method background_color is rw is also<background-color> {
     Proxy.new(
       FETCH => sub ($) {
@@ -46,7 +48,7 @@ class Slope::Figure {
       }
     );
   }
-  
+
   method add_scale (SlopeScale $scale) is also<add-scale> {
     slope_figure_add_scale($!f, $scale);
   }
@@ -70,11 +72,11 @@ class Slope::Figure {
   }
 
   method get_view is also<get-view> {
-    slope_figure_get_view($!f);
+    ::('Slope::View').new( slope_figure_get_view($!f) );
   }
 
-  method write_to_png (Str() $filename, Int() $width, Int() $height) 
-    is also<write-to-png> 
+  method write_to_png (Str() $filename, Int() $width, Int() $height)
+    is also<write-to-png>
   {
     my gint ($w, $h) = resolve-int($width, $height);
     slope_figure_write_to_png($!f, $filename, $w, $h);

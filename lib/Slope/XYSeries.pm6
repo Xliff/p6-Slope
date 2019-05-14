@@ -7,24 +7,43 @@ use Slope::Raw::Types;
 
 use GTK::Raw::Utils;
 
-class Slope::XYSeries {
+use Slope::Item;
+
+our XYSeriesAncestry is export of Mu
+  where SlopeXySeries | ItemAncestry;
+
+class Slope::XYSeries is Slope::Item {
   has SlopeXySeries $!xys;
-  
+
   submethod BUILD (:$series) {
-    $!xys = $series;
+    my $to-parent;
+    $!xys = do given $legend {
+      when SlopeXySeries {
+        $to-parent = cast(SlopeItem, $_);
+        $_;
+      }
+      default {
+        $to-parent = $_;
+        cast(SlopeLegend, $_);
+      }
+    }
+    self.setItem($to-parent);
   }
-  
-  method Slope::Raw::Types::SlopeXySeries 
+
+  method Slope::Raw::Types::SlopeXySeries
     is also<
       SlopeXySeries
       XySeries
     >
   { $!xys }
 
-  method new {
+  multi method new (XYSeriesAncestry $series) {
+    self.bless(:$series);
+  }
+  multi method new {
     self.bless( series => slope_xyscale_new() );
   }
-  
+
   method get_axis (Int() $axis_id) is also<get-axis> {
     my gint $ai = resolve-int($axis_id);
     slope_xyscale_get_axis($!xys, $ai);

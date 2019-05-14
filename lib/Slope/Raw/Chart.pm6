@@ -30,19 +30,19 @@ sub slope_chart_get_type ()
 { * }
 
 sub slope_chart_get_view (SlopeChart $self)
-  returns GtkWidget
+  returns SlopeView
   is native(slope)
   is export
 { * }
-  
+
 sub slope_chart_new ()
   returns SlopeChart
-  is native(slope)  
-  is export 
+  is native(slope)
+  is export
 { * }
 
 sub slope_chart_new_detailed (Str $title, int32 $width, int32 $height)
-  returns GtkWidget
+  returns SlopeChart
   is native(slope)
   is export
 { * }
