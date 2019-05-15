@@ -65,11 +65,11 @@ class Slope::Sampler {
       @pi_samples.push: SlopeSample.new(
         coord => ($_ / 2 * π).Num,
         label => do {
-          when 0                      { '0'   }
-          when 1                      { 'π/2' }
-          when 2                      { 'π'   }
-          when 3|5|7|9|11|13|15|17|19 { "{ $_ }π/2" }
-          default                     { "{$_ div 2}π" }
+          when 0      { '0'   }
+          when 1      { 'π/2' }
+          when 2      { 'π'   }
+          when * % 2  { "{ $_ }π/2" }
+          default     { "{$_ div 2}π" }
         }
       );
     }
