@@ -7,8 +7,14 @@ use Slope::Raw::Types;
 
 use Slope::Raw::Scale;
 
+use GTK::Compat::Roles::ListData;
 use GTK::Compat::Roles::Object;
 use GTK::Roles::Protection;
+
+use GTK::Compat::GList;
+
+use Slope::Figure;
+use Slope::View;
 
 our subset SlopeScaleAncestry is export of Mu
   where SlopeScale | GObject;
@@ -105,7 +111,7 @@ class Slope::Scale {
   }
 
   method get_figure is also<get-figure> {
-    slope_scale_get_figure($!s);
+    Slope::Figure.new( slope_scale_get_figure($!s) );
   }
 
   method get_figure_rect (SlopeRect $rect) is also<get-figure-rect> {
@@ -113,11 +119,14 @@ class Slope::Scale {
   }
 
   method get_item_by_name (Str() $itemname) is also<get-item-by-name> {
-    slope_scale_get_item_by_name($!s, $itemname);
+    ::('Slope::Item').new( slope_scale_get_item_by_name($!s, $itemname) );
   }
 
-  method get_item_list is also<get-item-list> {
-    slope_scale_get_item_list($!s);
+  method get_item_list (:$raw = False) is also<get-item-list> {
+    my $l = GTK::Compat::GList.new( slope_scale_get_item_list($!s) )
+      but GTK::Compat::Roles::ListData[SlopeItem];
+    $raw ??
+      $l.Array !! $l.Array.map({ Slope::Item.new($_) });
   }
 
   method get_layout_rect (SlopeRect $rect) is also<get-layout-rect> {
@@ -125,7 +134,7 @@ class Slope::Scale {
   }
 
   method get_legend is also<get-legend> {
-    slope_scale_get_legend($!s);
+    ::('Slope::Legend').new( slope_scale_get_legend($!s) );
   }
 
   method get_type is also<get-type> {
@@ -134,7 +143,7 @@ class Slope::Scale {
   }
 
   method get_view is also<get-view> {
-    slope_scale_get_view($!s);
+    Slope::View.new( slope_scale_get_view($!s) );
   }
 
   method map (SlopePoint $res, SlopePoint $src) {

@@ -24,13 +24,13 @@ Slope::Raw::XYAxis
 Slope::Raw::XYScale
 Slope::Raw::XYSeries
 Slope::Sampler
-Slope::Scale
-Slope::XYScale
 Slope::Drawing
 Slope::Figure
+Slope::View
+Slope::Chart
+Slope::Scale
 Slope::Item
 Slope::Legend
-Slope::View
 Slope::XYAxis
+Slope::XYScale
 Slope::XYSeries
-Slope::Chart

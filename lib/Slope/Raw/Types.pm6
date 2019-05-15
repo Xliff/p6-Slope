@@ -44,7 +44,7 @@ class SlopeMouseEvent is repr('CStruct') does GTK::Roles::Pointers is export {
   has guint32 $.type   is rw;
 }
 
-class SlopeSample     is repr('CStruct') does GTK::Roles::Pointers is export {
+class SlopeSample is repr('CStruct') does GTK::Roles::Pointers is export {
   has gdouble $.coord is rw;
   has Str     $!label;
 
@@ -54,12 +54,17 @@ class SlopeSample     is repr('CStruct') does GTK::Roles::Pointers is export {
       STORE => -> $, Str() $nv {
         nqp::bindattr(
           nqp::decont(self),
-          Str,
+          SlopeSample,
           '$!label',
-          nqp::decont( $nv )
+          nqp::unbox_s( $nv )
         )
       };
   }
+
+  submethod BUILD(:$!coord, :$label) {
+    self.label = $label;
+  }
+
 }
 
 class SlopeSampler is repr('CStruct') does GTK::Roles::Pointers is export {
@@ -75,7 +80,7 @@ class SlopeSampler is repr('CStruct') does GTK::Roles::Pointers is export {
       STORE => -> $, GList() $nv {
         nqp::bindattr(
           nqp::decont(self),
-          GList,
+          SlopeSampler,
           '$!sample_list',
           nqp::decont( $nv )
         )

@@ -9,6 +9,7 @@ use GTK::Raw::Utils;
 
 use Slope::Raw::XYScale;
 
+use Slope::Item;
 use Slope::Scale;
 
 our subset XYScaleAncestry is export of Mu

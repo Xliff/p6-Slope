@@ -23,21 +23,24 @@
       "Slope::Raw::XYScale"  :  "lib/Slope/Raw/XYScale.pm6"  ,
       "Slope::Raw::XYSeries" :  "lib/Slope/Raw/XYSeries.pm6" ,
       "Slope::Sampler"       :  "lib/Slope/Sampler.pm6"      ,
-      "Slope::Scale"         :  "lib/Slope/Scale.pm6"        ,
-      "Slope::XYScale"       :  "lib/Slope/XYScale.pm6"      ,
       "Slope::Drawing"       :  "lib/Slope/Drawing.pm6"      ,
       "Slope::Figure"        :  "lib/Slope/Figure.pm6"       ,
+      "Slope::View"          :  "lib/Slope/View.pm6"         ,
+      "Slope::Chart"         :  "lib/Slope/Chart.pm6"        ,
+      "Slope::Scale"         :  "lib/Slope/Scale.pm6"        ,
       "Slope::Item"          :  "lib/Slope/Item.pm6"         ,
       "Slope::Legend"        :  "lib/Slope/Legend.pm6"       ,
-      "Slope::View"          :  "lib/Slope/View.pm6"         ,
       "Slope::XYAxis"        :  "lib/Slope/XYAxis.pm6"       ,
-      "Slope::XYSeries"      :  "lib/Slope/XYSeries.pm6"     ,
-      "Slope::Chart"         :  "lib/Slope/Chart.pm6"        
+      "Slope::XYScale"       :  "lib/Slope/XYScale.pm6"      ,
+      "Slope::XYSeries"      :  "lib/Slope/XYSeries.pm6"     
     },
   "resources": [],
   "license": "Write me!",
   "source-url": "https://github.com/Xliff/p6-Scope.git"
 }
+
+
+
 
 
 

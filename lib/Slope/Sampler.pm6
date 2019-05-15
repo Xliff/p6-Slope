@@ -1,6 +1,7 @@
 use v6.c;
 
 use Method::Also;
+use NativeCall;
 
 use GTK::Compat::Types;
 use Slope::Raw::Types;
@@ -14,16 +15,8 @@ use GTK::Compat::Roles::TypedBuffer;
 
 # Boxed type.
 
-# our @month_samples is export;
-# our @pi_samples    is export;
-# BEGIN {
-#   my $ap;
-#   $ap = $slope_sampler_month_samples_array but GTK::Compat::Roles::TypedBuffer[SlopeSample];
-#   @month_samples[$_] = $ap[$_] for ^MONTH_SAMPLES;
-#
-#   $ap = $slope_sampler_pi_samples_array    but GTK::Compat::Roles::TypedBuffer[SlopeSample];
-#   @pi_samples[$_]    = $ap[$_] for ^PI_SAMPLES;
-# }
+our @month_samples is export;
+our @pi_samples is export;
 
 class Slope::Sampler {
   has SlopeSampler $!s;
@@ -37,6 +30,55 @@ class Slope::Sampler {
   }
   multi method new {
     self.bless( sampler => slope_sampler_new() );
+  }
+
+  method month_samples {
+    return @month_samples if +@month_samples;
+
+    @month_samples = (
+      SlopeSample.new( coord =>  1.Num, label => 'Jan' ),
+      SlopeSample.new( coord =>  2.Num, label => 'Feb' ),
+      SlopeSample.new( coord =>  3.Num, label => 'Mar' ),
+      SlopeSample.new( coord =>  4.Num, label => 'Apr' ),
+      SlopeSample.new( coord =>  5.Num, label => 'May' ),
+      SlopeSample.new( coord =>  6.Num, label => 'Jun' ),
+      SlopeSample.new( coord =>  7.Num, label => 'Jul' ),
+      SlopeSample.new( coord =>  8.Num, label => 'Oct' ),
+      SlopeSample.new( coord =>  9.Num, label => 'Sep' ),
+      SlopeSample.new( coord => 10.Num, label => 'Oct' ),
+      SlopeSample.new( coord => 11.Num, label => 'Nov' ),
+      SlopeSample.new( coord => 12.Num, label => 'Dec' )
+    );
+    @month_samples;
+
+    # my $month_samples := cglobal(
+    #   slope, 'slope_sampler_month_samples', Pointer
+    # );
+    # say $month_samples;
+    # Pointer.new($month_samples + 2 * nativesizeof(SlopeSample));
+  }
+
+  method pi_samples {
+    return @pi_samples if +@pi_samples;
+
+    for ^21 {
+      @pi_samples.push: SlopeSample.new(
+        coord => ($_ / 2 * π).Num,
+        label => do {
+          when 0                      { '0'   }
+          when 1                      { 'π/2' }
+          when 2                      { 'π'   }
+          when 3|5|7|9|11|13|15|17|19 { "{ $_ }π/2" }
+          default                     { "{$_ div 2}π" }
+        }
+      );
+    }
+    @pi_samples;
+
+    # my $ap = $slope_sampler_pi_samples_array
+    #   but GTK::Compat::Roles::TypedBuffer[SlopeSample];
+    # @pi_samples[$_] = $ap[$_] for ^PI_SAMPLES;
+    # @pi_samples;
   }
 
   method add_sample (Num() $coord, Str() $label) is also<add-sample> {
@@ -68,7 +110,7 @@ class Slope::Sampler {
      GTK::Compat::Roles::ListData[SlopeSample]).Array;
   }
 
-  method set_samples (SlopeSample() $sample_array, Int() $n_samples)
+  method set_samples (Pointer $sample_array, Int() $n_samples)
     is also<set-samples>
   {
     my gint $ns = resolve-int($n_samples);

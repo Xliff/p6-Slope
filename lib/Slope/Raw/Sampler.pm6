@@ -52,7 +52,7 @@ sub slope_sampler_new ()
 
 sub slope_sampler_set_samples (
   SlopeSampler $self,
-  SlopeSample $sample_array,
+  Pointer $sample_array,
   gint $n_samples
 )
   is native(slope)
@@ -60,11 +60,11 @@ sub slope_sampler_set_samples (
   { * }
 
 our constant MONTH_SAMPLES is export = 12;
-our $slope_sampler_month_samples_array is export := cglobal(
+our $month_samples := cglobal(
   slope, 'slope_sampler_month_samples_array', Pointer
 );
 
 our constant PI_SAMPLES    is export = 21;
-our $slope_sampler_pi_samples_array is export := cglobal(
+our $pi_samples := cglobal(
   slope, 'slope_sampler_pi_samples_array', Pointer
 );
