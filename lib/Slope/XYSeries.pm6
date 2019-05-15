@@ -47,7 +47,7 @@ class Slope::XYSeries is Slope::Item {
     self.bless( series => slope_xyseries_new() );
   }
 
-  method !xy_to_vec ( @xy where *.elems == 2 ) {
+  method !xy_to_vec ( @xy where so *.all.elems == 2 ) {
     my ($x_vec, $y_vec) = CArray[gdouble].new xx 2;
     my glong $np = @xy.elems;
     ($x_vec[$_], $y_vec[$_]) = |@xy[$_] for ^$np;
@@ -78,7 +78,9 @@ class Slope::XYSeries is Slope::Item {
     Str() $style
   ) {
     my glong $np = resolve-int64($n_pts);
-    slope_xyseries_new_filled($name, $x_vec, $y_vec, $np, $style);
+    self.bless(
+      series => slope_xyseries_new_filled($name, $x_vec, $y_vec, $np, $style)
+    );
   }
 
   method get_type {

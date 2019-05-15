@@ -8,18 +8,30 @@ use Slope::Raw::Types;
 use Slope::Raw::Scale;
 
 use GTK::Compat::Roles::Object;
+use GTK::Roles::Protection;
 
 our subset SlopeScaleAncestry is export of Mu
   where SlopeScale | GObject;
 
 class Slope::Scale {
   also does GTK::Compat::Roles::Object;
+  also does GTK::Roles::Protection;
 
   has SlopeScale $!s;
 
   submethod BUILD (:$scale) {
+    self.ADD-PREFIX('Slope::');
+    self.setScale($scale) with $scale;
+  }
+
+  method setScale(SlopeScaleAncestry $scale) {
+    self.IS-PROTECTED;
     self!setObject( cast(GObject, $!s = $scale) );
   }
+
+  method Slope::Raw::Types::SlopeScale
+    is also<SlopeScale>
+  { $!s }
 
   method new (SlopeScale $scale) {
     self.bless(:$scale);

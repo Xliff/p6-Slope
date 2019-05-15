@@ -21,12 +21,13 @@ our subset SlopeItemAncestry is export of Mu
 
 class Slope::Item {
   also does GTK::Compat::Roles::Object;
+  also does GTK::Roles::Protection;
 
   has SlopeItem $!i;
 
   submethod BUILD (:$item) {
     self.ADD-PREFIX('Slope::');
-    self.setItem($item);
+    self.setItem($item) with $item;
   }
 
   method Slope::Raw::Types::SlopeItem

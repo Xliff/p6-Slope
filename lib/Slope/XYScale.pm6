@@ -14,7 +14,7 @@ use Slope::Scale;
 our subset XYScaleAncestry is export of Mu
   where SlopeXyScale | SlopeScaleAncestry;
 
-class Slope::XYScale is SlopeScale {
+class Slope::XYScale is Slope::Scale {
   has SlopeXyScale $!xys;
 
   submethod BUILD (:$xyscale) {

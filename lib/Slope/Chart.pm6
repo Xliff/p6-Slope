@@ -41,7 +41,7 @@ class Slope::Chart is GTK::Window {
     self.bless( chart => slope_chart_new_detailed($title, $width, $height) );
   }
 
-  method add_scale (SlopeScale $scale) is also<add-scale> {
+  method add_scale (SlopeScale() $scale) is also<add-scale> {
     slope_chart_add_scale($!c, $scale);
   }
 
