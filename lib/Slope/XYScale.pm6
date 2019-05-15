@@ -9,8 +9,8 @@ use GTK::Raw::Utils;
 
 use Slope::Raw::XYScale;
 
-use Slope::Item;
 use Slope::Scale;
+use Slope::XYAxis;
 
 our subset XYScaleAncestry is export of Mu
   where SlopeXyScale | SlopeScaleAncestry;
@@ -45,7 +45,8 @@ class Slope::XYScale is Slope::Scale {
 
   method get_axis (Int() $axis_id) is also<get-axis> {
     my guint $aid = resolve-uint($axis_id);
-    Slope::Item.new( slope_xyscale_get_axis($!xys, $aid) );
+    my $a = slope_xyscale_get_axis($!xys, $aid);
+    Slope::XYAxis.new( $a );
   }
 
   method get_type is also<get-type> {

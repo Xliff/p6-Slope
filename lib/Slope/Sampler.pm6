@@ -110,9 +110,15 @@ class Slope::Sampler {
      GTK::Compat::Roles::ListData[SlopeSample]).Array;
   }
 
-  method set_samples (Pointer $sample_array, Int() $n_samples)
+  proto method set_samples (|)
     is also<set-samples>
-  {
+  { * }
+
+  multi method set_samples(@array) {
+    my $buff = GTK::Compat::Roles::TypedBuffer[SlopeSample].new(@array);
+    samewith($buff.p, @array.elems);
+  }
+  multi method set_samples (Pointer $sample_array, Int() $n_samples) {
     my gint $ns = resolve-int($n_samples);
     slope_sampler_set_samples($!s, $sample_array, $ns);
   }

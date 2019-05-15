@@ -8,7 +8,7 @@ use Slope::Raw::Types;
 unit package Slope::Raw::XYScale;
 
 sub slope_xyscale_get_axis (SlopeXyScale $self, gint $axis_id)
-  returns SlopeItem
+  returns SlopeXyAxis
   is native(slope)
   is export
   { * }

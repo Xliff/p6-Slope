@@ -18,14 +18,14 @@ our subset XYAxisAncestry is export of Mu
 class Slope::XYAxis is Slope::Item {
   has SlopeXyAxis $!xya;
 
-  submethod BLESS (:$axis) {
+  submethod BUILD (:$axis) {
     self.setItem( cast(SlopeItem, $!xya = $axis) );
   }
 
   multi method new (XYAxisAncestry $axis) {
     self.bless(:$axis);
   }
-  multi method new (Str() $title) {
+  multi method new (Str $title) {
     slope_xyaxis_new($!xya, $title);
   }
 
@@ -96,7 +96,8 @@ class Slope::XYAxis is Slope::Item {
   }
 
   method get_sampler is also<get-sampler> {
-    Slope::Sampler.new( slope_xyaxis_get_sampler($!xya) );
+    my $s = slope_xyaxis_get_sampler($!xya);
+    Slope::Sampler.new( $s );
   }
 
   method get_type is also<get-type> {
