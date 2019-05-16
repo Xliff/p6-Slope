@@ -60,6 +60,10 @@ class Slope::XYSeries is Slope::Item {
     ($x_vec, $y_vec, $np);
   }
 
+  proto method new_filled (|)
+    is also<new-filled>
+  { * }
+
   multi method new_filled (
     Str() $name,
     @xy,
@@ -84,12 +88,16 @@ class Slope::XYSeries is Slope::Item {
     );
   }
 
-  method get_type {
+  method get_type is also<get-type> {
     state ($n, $t);
     unstable_get_type( self.^name, &slope_xyseries_get_type, $n, $t);
   }
 
-  multi method set_data(@xy) {
+  proto method set_data (|)
+    is also<set-data>
+  { * }
+
+  multi method set_data(@xy)  {
     samewith( |self!xy_to_vec(@xy) )
   }
   multi method set_data(@x, @y) {
@@ -104,13 +112,17 @@ class Slope::XYSeries is Slope::Item {
     slope_xyseries_set_data($!xys, $x_vec, $y_vec, $np);
   }
 
-  method set_style (Str() $style) {
+  method set_style (Str() $style) is also<set-style> {
     slope_xyseries_set_style($!xys, $style);
   }
 
   method update {
     slope_xyseries_update($!xys);
   }
+
+  proto method update_data
+    is also<update-data>
+  { * }
 
   multi method update_data(@xy) {
     samewith( self!xy_to_vec(@xy) );
