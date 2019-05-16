@@ -71,6 +71,7 @@ class Slope::XYSeries is Slope::Item {
     samewith($name, |self!x_and_y_to_vec(@x, @y), $style);
   }
   multi method new_filled (
+    Slope::XYSeries:U:
     Str() $name,
     CArray[gdouble] $x_vec,
     CArray[gdouble] $y_vec,
