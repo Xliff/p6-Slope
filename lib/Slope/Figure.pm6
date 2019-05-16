@@ -58,7 +58,7 @@ class Slope::Figure {
     );
   }
 
-  method add_scale (SlopeScale $scale) is also<add-scale> {
+  method add_scale (SlopeScale() $scale) is also<add-scale> {
     slope_figure_add_scale($!f, $scale);
   }
 
@@ -68,11 +68,14 @@ class Slope::Figure {
   }
 
   method get_legend is also<get-legend> {
-    slope_figure_get_legend($!f);
+    ::('Slope::Legend').new( slope_figure_get_legend($!f) );
   }
 
-  method get_scale_list is also<get-scale-list> {
-    slope_figure_get_scale_list($!f);
+  method get_scale_list (:$raw = False) is also<get-scale-list> {
+    my $l = GTK::Compat::GList.new( slope_figure_get_scale_list($!f) )
+      but GTK::Compat::Roles::ListData[SlopeScale];
+    $raw ??
+      $l.Array !! $l.Array.map({ Slope::Scale.new($_) });
   }
 
   method get_type is also<get-type> {
