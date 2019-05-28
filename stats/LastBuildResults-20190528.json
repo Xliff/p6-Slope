@@ -1,0 +1,366 @@
+{
+  "DEPENDENCIES": {
+    "user": 0.62e0,
+    "sys": 0.05e0,
+    "real": 0.4e0
+  },
+  "Slope::Raw::XYScale": {
+    "moar": 0e0,
+    "mast": 0.003e0,
+    "start": 0e0,
+    "mbc": 0e0,
+    "ast": 0e0,
+    "optimize": 0.001e0,
+    "parse": 1.684e0,
+    "syntaxcheck": 0e0
+  },
+  "GTK::Widget": {
+    "mbc": 0e0,
+    "moar": 0e0,
+    "mast": 0.001e0,
+    "start": 0e0,
+    "syntaxcheck": 0e0,
+    "ast": 0e0,
+    "optimize": 0e0,
+    "parse": 1.905e0
+  },
+  "Slope::Raw::Scale": {
+    "start": 0e0,
+    "mast": 0.003e0,
+    "moar": 0e0,
+    "mbc": 0.001e0,
+    "parse": 0.657e0,
+    "ast": 0e0,
+    "optimize": 0.001e0,
+    "syntaxcheck": 0e0
+  },
+  "Slope::Raw::Sampler": {
+    "start": 0e0,
+    "mast": 0.003e0,
+    "moar": 0e0,
+    "mbc": 0e0,
+    "parse": 1.697e0,
+    "optimize": 0.001e0,
+    "ast": 0e0,
+    "syntaxcheck": 0e0
+  },
+  "tainted": [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "Slope::Figure": {
+    "syntaxcheck": 0e0,
+    "ast": 0e0,
+    "optimize": 0.001e0,
+    "parse": 4.499e0,
+    "mbc": 0e0,
+    "moar": 0e0,
+    "start": 0e0,
+    "mast": 0.003e0
+  },
+  "GTK::Raw::Utils": {
+    "parse": 0.8e0,
+    "optimize": 0e0,
+    "ast": 0e0,
+    "syntaxcheck": 0e0,
+    "start": 0e0,
+    "mast": 0.001e0,
+    "moar": 0e0,
+    "mbc": 0e0
+  },
+  "GTK::Window": {
+    "parse": 2.186e0,
+    "optimize": 0e0,
+    "ast": 0e0,
+    "syntaxcheck": 0e0,
+    "mast": 0.001e0,
+    "start": 0e0,
+    "moar": 0e0,
+    "mbc": 0e0
+  },
+  "Cairo": {
+    "mbc": 0.001e0,
+    "moar": 0e0,
+    "start": 0e0,
+    "mast": 0.003e0,
+    "syntaxcheck": 0e0,
+    "optimize": 0.001e0,
+    "ast": 0e0,
+    "parse": 0.729e0
+  },
+  "GTK::DrawingArea": {
+    "mbc": 0e0,
+    "start": 0e0,
+    "mast": 0.001e0,
+    "moar": 0e0,
+    "syntaxcheck": 0e0,
+    "parse": 1.936e0,
+    "optimize": 0e0,
+    "ast": 0e0
+  },
+  "Slope::Raw::Item": {
+    "syntaxcheck": 0e0,
+    "parse": 0.661e0,
+    "ast": 0e0,
+    "optimize": 0.001e0,
+    "mbc": 0e0,
+    "mast": 0.003e0,
+    "start": 0e0,
+    "moar": 0e0
+  },
+  "GTK::Compat::Roles::Object": {
+    "syntaxcheck": 0e0,
+    "ast": 0e0,
+    "optimize": 0e0,
+    "parse": 0.893e0,
+    "mbc": 0e0,
+    "moar": 0e0,
+    "start": 0e0,
+    "mast": 0.001e0
+  },
+  "Slope::Scale": {
+    "mbc": 0e0,
+    "mast": 0.003e0,
+    "start": 0e0,
+    "moar": 0e0,
+    "syntaxcheck": 0e0,
+    "parse": 1.067e0,
+    "ast": 0e0,
+    "optimize": 0.001e0
+  },
+  "Method::Also": {
+    "syntaxcheck": 0e0,
+    "optimize": 0.001e0,
+    "ast": 0e0,
+    "parse": 0.611e0,
+    "mbc": 0e0,
+    "moar": 0e0,
+    "mast": 0.003e0,
+    "start": 0e0
+  },
+  "Slope::Raw::Types": {
+    "syntaxcheck": 0e0,
+    "optimize": 0.001e0,
+    "ast": 0e0,
+    "parse": 0.675e0,
+    "mbc": 0.001e0,
+    "moar": 0e0,
+    "mast": 0.003e0,
+    "start": 0e0
+  },
+  "Slope::Raw::Legend": {
+    "moar": 0e0,
+    "start": 0e0,
+    "mast": 0.003e0,
+    "mbc": 0e0,
+    "optimize": 0.001e0,
+    "ast": 0e0,
+    "parse": 2.057e0,
+    "syntaxcheck": 0e0
+  },
+  "Slope::Raw::Chart": {
+    "moar": 0e0,
+    "mast": 0.003e0,
+    "start": 0e0,
+    "mbc": 0e0,
+    "optimize": 0.001e0,
+    "ast": 0e0,
+    "parse": 1.969e0,
+    "syntaxcheck": 0e0
+  },
+  "GTK::Roles::Pointers": {
+    "mbc": 0e0,
+    "moar": 0e0,
+    "mast": 0.001e0,
+    "start": 0e0,
+    "syntaxcheck": 0e0,
+    "optimize": 0e0,
+    "ast": 0e0,
+    "parse": 0.671e0
+  },
+  "GTK::Compat::Types": {
+    "syntaxcheck": 0e0,
+    "parse": 0.763e0,
+    "optimize": 0.003e0,
+    "ast": 0e0,
+    "mbc": 0.002e0,
+    "start": 0e0,
+    "mast": 0.007e0,
+    "moar": 0e0
+  },
+  "GTK::Compat::Roles::ListData": {
+    "moar": 0e0,
+    "mast": 0.001e0,
+    "start": 0e0,
+    "mbc": 0e0,
+    "optimize": 0e0,
+    "ast": 0e0,
+    "parse": 0.744e0,
+    "syntaxcheck": 0e0
+  },
+  "Slope::Raw::Figure": {
+    "mast": 0.003e0,
+    "start": 0e0,
+    "moar": 0e0,
+    "mbc": 0e0,
+    "parse": 0.642e0,
+    "ast": 0e0,
+    "optimize": 0.001e0,
+    "syntaxcheck": 0e0
+  },
+  "GTK::Roles::Protection": {
+    "mbc": 0e0,
+    "moar": 0e0,
+    "start": 0e0,
+    "mast": 0.003e0,
+    "syntaxcheck": 0e0,
+    "ast": 0e0,
+    "optimize": 0.001e0,
+    "parse": 0.577e0
+  },
+  "GTK::Compat::GList": {
+    "mbc": 0e0,
+    "start": 0e0,
+    "mast": 0.001e0,
+    "moar": 0e0,
+    "syntaxcheck": 0e0,
+    "parse": 0.848e0,
+    "ast": 0e0,
+    "optimize": 0e0
+  },
+  "SUMMARY": {
+    "real": 52.78e0,
+    "sys": 3.76e0,
+    "user": 69.36e0
+  },
+  "Slope::XYAxis": {
+    "ast": 0e0,
+    "optimize": 0.001e0,
+    "parse": 2.667e0,
+    "syntaxcheck": 0e0,
+    "moar": 0e0,
+    "start": 0e0,
+    "mast": 0.003e0,
+    "mbc": 0e0
+  },
+  "GTK::Raw::Types": {
+    "syntaxcheck": 0e0,
+    "ast": 0e0,
+    "optimize": 0.003e0,
+    "parse": 0.843e0,
+    "mbc": 0.002e0,
+    "moar": 0e0,
+    "start": 0e0,
+    "mast": 0.006e0
+  },
+  "Slope::Raw::View": {
+    "moar": 0e0,
+    "start": 0e0,
+    "mast": 0.003e0,
+    "mbc": 0e0,
+    "ast": 0e0,
+    "optimize": 0.001e0,
+    "parse": 0.652e0,
+    "syntaxcheck": 0e0
+  },
+  "Slope::Raw::Drawing": {
+    "syntaxcheck": 0e0,
+    "parse": 1.989e0,
+    "ast": 0e0,
+    "optimize": 0.001e0,
+    "mbc": 0e0,
+    "mast": 0.003e0,
+    "start": 0e0,
+    "moar": 0e0
+  },
+  "GTK::Compat::Roles::TypedBuffer": {
+    "moar": 0e0,
+    "start": 0e0,
+    "mast": 0.001e0,
+    "mbc": 0e0,
+    "ast": 0e0,
+    "optimize": 0e0,
+    "parse": 0.799e0,
+    "syntaxcheck": 0e0
+  },
+  "Slope::Raw::XYAxis": {
+    "mbc": 0e0,
+    "moar": 0e0,
+    "mast": 0.003e0,
+    "start": 0e0,
+    "syntaxcheck": 0e0,
+    "ast": 0e0,
+    "optimize": 0.001e0,
+    "parse": 2.023e0
+  },
+  "Slope::View": {
+    "syntaxcheck": 0e0,
+    "parse": 1.05e0,
+    "ast": 0e0,
+    "optimize": 0.001e0,
+    "mbc": 0e0,
+    "mast": 0.003e0,
+    "start": 0e0,
+    "moar": 0e0
+  },
+  "Slope::Sampler": {
+    "ast": 0e0,
+    "optimize": 0.001e0,
+    "parse": 1.631e0,
+    "syntaxcheck": 0e0,
+    "moar": 0e0,
+    "mast": 0.003e0,
+    "start": 0e0,
+    "mbc": 0e0
+  },
+  "Slope::Raw::XYSeries": {
+    "parse": 1.718e0,
+    "optimize": 0.001e0,
+    "ast": 0e0,
+    "syntaxcheck": 0e0,
+    "start": 0e0,
+    "mast": 0.003e0,
+    "moar": 0e0,
+    "mbc": 0e0
+  },
+  "Slope::Item": {
+    "mast": 0.003e0,
+    "start": 0e0,
+    "moar": 0e0,
+    "mbc": 0e0,
+    "parse": 9.626e0,
+    "ast": 0e0,
+    "optimize": 0.001e0,
+    "syntaxcheck": 0e0
+  }
+}
