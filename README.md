@@ -1,4 +1,4 @@
-# p6-COGL
+# p6-Slope
 
 ## Installation
 
@@ -8,17 +8,17 @@ Make a directory to contain the p6-Gtk-based projects. Once made, then set the P
 $ export P6_GTK_HOME=/path/to/projects
 ```
 
-Switch to that directory and clone both p6-GtkPlus and p6-COGL
+Switch to that directory and clone both p6-GtkPlus and p6-Slope
 
 ```
 $ git clone https://github.com/Xliff/p6-Pango.git
 $ git clone https://github.com/Xliff/p6-GtkPlus.git
-$ git clone https://github.com/Xliff/p6-COGL.git
+$ git clone https://github.com/Xliff/p6-Slope.git
 $ cd p6-GtkPlus
 $ zef install --deps-only .
 ```
 
-[Optional] To build all of COGL and the required GTK modules, you can change to the p6-COGL directory and do:
+[Optional] To build all of Slope and the required GTK modules, you can change to the p6-Slope directory and do:
 
 ```
 ./build.sh
