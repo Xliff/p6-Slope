@@ -105,6 +105,7 @@ class Slope::Sampler {
   }
 
   method get_sample_list is also<get-sample-list> {
+    # Needs definedness check.
     (GTK::Compat::List.new( slope_sampler_get_sample_list($!s) )
       but
      GTK::Compat::Roles::ListData[SlopeSample]).Array;

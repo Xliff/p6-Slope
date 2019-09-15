@@ -107,13 +107,18 @@ class Slope::Item {
   }
 
   method get_subitem_list (:$raw = False) is also<get-subitem-list> {
-    my $l = GTK::Compat::List.new( slope_item_get_subitem_list($!i) );
-    $raw ??
-      $l.Array
+    my $l = GTK::Compat::List.new( slope_item_get_subitem_list($!i) )
+      but GTK::Compat::Roles::ListData[SlopeItem];
+
+    do if $l {
+      ( $raw ??
+        $l.Array !!
+        $l.Array.map({ Slope::Item.new( $_ ) }) );
       !!
-      ($l but GTK::Compat::Roles::ListData[SlopeItem])
-        .Array
-        .map({ Slope::Item.new( $_ ) });
+      Nil
+    } else {
+      Nil;
+    }
   }
 
   method get_type is also<get-type> {

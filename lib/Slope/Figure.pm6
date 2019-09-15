@@ -72,6 +72,7 @@ class Slope::Figure {
   }
 
   method get_scale_list (:$raw = False) is also<get-scale-list> {
+    # Needs definedness check!
     my $l = GTK::Compat::GList.new( slope_figure_get_scale_list($!f) )
       but GTK::Compat::Roles::ListData[SlopeScale];
     $raw ??

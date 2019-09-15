@@ -123,6 +123,7 @@ class Slope::Scale {
   }
 
   method get_item_list (:$raw = False) is also<get-item-list> {
+    # Needs definedness check.
     my $l = GTK::Compat::GList.new( slope_scale_get_item_list($!s) )
       but GTK::Compat::Roles::ListData[SlopeItem];
     $raw ??
