@@ -114,7 +114,6 @@ class Slope::Item {
       ( $raw ??
         $l.Array !!
         $l.Array.map({ Slope::Item.new( $_ ) }) );
-      !!
       Nil
     } else {
       Nil;
