@@ -9,12 +9,14 @@ use GTK::Raw::Utils;
 
 use Slope::Raw::Item;
 
-use GTK::Compat::Roles::Object;
-use GTK::Compat::Roles::ListData;
-use GTK::Roles::Protection;
+use GTK::Compat::GList;
 
 use Slope::Figure;
 use Slope::Scale;
+
+use GTK::Compat::Roles::Object;
+use GTK::Compat::Roles::ListData;
+use GTK::Roles::Protection;
 
 our subset SlopeItemAncestry is export of Mu
   where SlopeItem | GObject;
@@ -23,11 +25,12 @@ class Slope::Item {
   also does GTK::Compat::Roles::Object;
   also does GTK::Roles::Protection;
 
-  has SlopeItem $!i;
+  has SlopeItem $!i is implementor;
 
   submethod BUILD (:$item) {
     self.ADD-PREFIX('Slope::');
-    self.setItem($item) with $item;
+
+    self.setItem($item) if $item;
   }
 
   method Slope::Raw::Types::SlopeItem
@@ -36,10 +39,15 @@ class Slope::Item {
 
   method setItem (SlopeItem $item) {
     self.IS-PROTECTED;
-    self!setObject($!i = $item);
+
+    $!i = $item;
+
+    self.roleInit-Object;
   }
 
   method new (SlopeItem $item) {
+    return unless $item;
+
     self.bless(:$item);
   }
 
@@ -49,7 +57,8 @@ class Slope::Item {
         so slope_item_get_is_managed($!i);
       },
       STORE => sub ($, Int() $managed is copy) {
-        my gboolean $m = resolve-bool($managed);
+        my gboolean $m = $managed.so.Int;
+
         slope_item_set_is_managed($!i, $m);
       }
     );
@@ -61,7 +70,8 @@ class Slope::Item {
         so slope_item_get_is_visible($!i);
       },
       STORE => sub ($, $visible is copy) {
-        my gboolean $v = resolve-bool($visible);
+        my gboolean $v = $visible.so.Int;
+
         slope_item_set_is_visible($!i, $v);
       }
     );
@@ -90,43 +100,64 @@ class Slope::Item {
     slope_item_get_data_rect($!i, $rect);
   }
 
-  method get_figure is also<get-figure> {
-    Slope::Figure.new( slope_item_get_figure($!i) );
+  method get_figure (:$raw = False) is also<get-figure> {
+    my $f = slope_item_get_figure($!i);
+
+    $f ??
+      ( $raw ?? $f !! Slope::Figure.new($f) )
+      !!
+      Nil;
   }
 
   method get_figure_rect (SlopeRect $rect) is also<get-figure-rect> {
     slope_item_get_figure_rect($!i, $rect);
   }
 
-  method get_scale is also<get-scale> {
-    Slope::Scale.new( slope_item_get_scale($!i) );
-  }
+  method get_scale (:$raw = False) is also<get-scale> {
+    my $s = slope_item_get_scale($!i);
 
-  method get_sub_item (Str() $name) is also<get-sub-item> {
-    Slope::Item.new( slope_item_get_sub_item($!i, $name) );
-  }
-
-  method get_subitem_list (:$raw = False) is also<get-subitem-list> {
-    my $l = GTK::Compat::List.new( slope_item_get_subitem_list($!i) )
-      but GTK::Compat::Roles::ListData[SlopeItem];
-
-    do if $l {
-      ( $raw ??
-        $l.Array !!
-        $l.Array.map({ Slope::Item.new( $_ ) }) );
-      Nil
-    } else {
+    $s ??
+      ( $raw ?? $s !! Slope::Scale.new($s) )
+      !!
       Nil;
-    }
+  }
+
+  method get_sub_item (Str() $name, :$raw = False) is also<get-sub-item> {
+    my $i = slope_item_get_sub_item($!i, $name);
+
+    $i ??
+      ( $raw ?? $i !! Slope::Item.new($i) )
+      !!
+      Nil;
+  }
+
+  method get_subitem_list (:$glist = False, :$raw = False)
+    is also<get-subitem-list>
+  {
+    my $sl = slope_item_get_subitem_list($!i);
+
+    return Nil unless $sl;
+    return $sl if     $glist;
+
+    $sl = GTK::Compat::GList.new($sl)
+      but GTK::Compat::Roles::GListData[SlopeItem];
+
+    $raw ?? $sl.Array !! $sl.Array.map({ Slope::Item.new($_) });
   }
 
   method get_type is also<get-type> {
     state ($n, $t);
+
     unstable_get_type( self.^name, &slope_item_get_type, $n, $t );
   }
 
-  method get_view is also<get-view> {
-    Slope::View.new( slope_item_get_view($!i) );
+  method get_view (:$raw = False) is also<get-view> {
+    my $v = slope_item_get_view($!i);
+
+    $v ??
+      ( $raw ?? $v !! Slope::View.new($v) )
+      !!
+      Nil;
   }
 
 }

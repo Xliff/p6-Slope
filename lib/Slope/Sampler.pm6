@@ -6,9 +6,9 @@ use NativeCall;
 use GTK::Compat::Types;
 use Slope::Raw::Types;
 
-use GTK::Raw::Utils;
-
 use Slope::Raw::Sampler;
+
+use GTK::Compat::GList;
 
 use GTK::Compat::Roles::ListData;
 use GTK::Compat::Roles::TypedBuffer;
@@ -26,10 +26,14 @@ class Slope::Sampler {
   }
 
   multi method new (SlopeSampler $sampler) {
+    return unless $sampler;
+
     self.bless(:$sampler);
   }
   multi method new {
-    self.bless( sampler => slope_sampler_new() );
+    my $s = slope_sampler_new();
+
+    $s ?? self.bless( sampler => $s) !! Nil;
   }
 
   method month_samples {
@@ -89,6 +93,7 @@ class Slope::Sampler {
     is also<auto-sample-decimal>
   {
     my gdouble ($mn, $mx, $h) = ($min, $max, $hint);
+
     slope_sampler_auto_sample_decimal($!s, $mn, $mx, $h);
   }
 
@@ -104,11 +109,16 @@ class Slope::Sampler {
     slope_sampler_get_mode($!s);
   }
 
-  method get_sample_list is also<get-sample-list> {
-    # Needs definedness check.
-    (GTK::Compat::List.new( slope_sampler_get_sample_list($!s) )
-      but
-     GTK::Compat::Roles::ListData[SlopeSample]).Array;
+  method get_sample_list (:$glist = False) is also<get-sample-list> {
+    my $sl = slope_sampler_get_sample_list($!s);
+
+    return Nil unless $sl;
+    return $sl if     $glist;
+
+    $sl = GTK::Compat::GList.new($sl)
+      but GTK::Compat::Roles::GListData[SlopeSample];
+
+    $sl.Array;
   }
 
   proto method set_samples (|)
@@ -116,11 +126,14 @@ class Slope::Sampler {
   { * }
 
   multi method set_samples(@array) {
+    return unless @array;
+
     my $buff = GTK::Compat::Roles::TypedBuffer[SlopeSample].new(@array);
     samewith($buff.p, @array.elems);
   }
   multi method set_samples (Pointer $sample_array, Int() $n_samples) {
-    my gint $ns = resolve-int($n_samples);
+    my gint $ns = $n_samples;
+
     slope_sampler_set_samples($!s, $sample_array, $ns);
   }
 

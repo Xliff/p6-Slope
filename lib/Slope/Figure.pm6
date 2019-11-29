@@ -7,26 +7,32 @@ use Method::Also;
 use GTK::Compat::Types;
 use Slope::Raw::Types;
 
-use GTK::Raw::Utils;
-
 use Slope::Raw::Figure;
+
+use GTK::Compat::GList;
 
 use GTK::Compat::Roles::Object;
 
 class Slope::Figure {
   also does GTK::Compat::Roles::Object;
 
-  has SlopeFigure $!f;
+  has SlopeFigure $!f is implementor;
 
   submethod BUILD (:$figure) {
-    self!setObject($!f = $figure);
+    $!f = $figure;
+
+    self.roleInit-Object;
   }
 
   multi method new (SlopeFigure $figure) {
+    return unless $figure;
+
     self.bless( :$figure );
   }
   multi method new {
-    self.bless( figure => slope_figure_new() );
+    my $f = slope_figure_new();
+
+    $f ?? self.bless( figure => $f ) !! Nil;
   }
 
   method Slope::Raw::Types::SlopeFigure
@@ -41,8 +47,10 @@ class Slope::Figure {
       FETCH => sub ($) {
         slope_figure_get_background_color($!f);
       },
-      STORE => sub ($, $color is copy) {
-        slope_figure_set_background_color($!f, $color);
+      STORE => sub ($, Int() $color is copy) {
+        my SlopeColor $c = $color;
+
+        slope_figure_set_background_color($!f, $c);
       }
     );
   }
@@ -50,10 +58,12 @@ class Slope::Figure {
   method is_managed is rw is also<is-managed> {
     Proxy.new(
       FETCH => sub ($) {
-        slope_figure_get_is_managed($!f);
+        so slope_figure_get_is_managed($!f);
       },
-      STORE => sub ($, $managed is copy) {
-        slope_figure_set_is_managed($!f, $managed);
+      STORE => sub ($, Int() $managed is copy) {
+        my gboolean $m = $managed.so.Int;
+
+        slope_figure_set_is_managed($!f, $m);
       }
     );
   }
@@ -68,30 +78,43 @@ class Slope::Figure {
   }
 
   method get_legend is also<get-legend> {
-    ::('Slope::Legend').new( slope_figure_get_legend($!f) );
+    my $l = slope_figure_get_legend($!f);
+
+    $l ?? ::('Slope::Legend').new($l) !! Nil;
   }
 
-  method get_scale_list (:$raw = False) is also<get-scale-list> {
+  method get_scale_list (:$glist = False, :$raw = False)
+    is also<get-scale-list>
+  {
     # Needs definedness check!
-    my $l = GTK::Compat::GList.new( slope_figure_get_scale_list($!f) )
+    my $sl = slope_figure_get_scale_list($!f);
+
+    return Nil unless $sl;
+    return $sl if     $glist;
+
+    $sl = GTK::Compat::GList.new($sl)
       but GTK::Compat::Roles::ListData[SlopeScale];
-    $raw ??
-      $l.Array !! $l.Array.map({ Slope::Scale.new($_) });
+
+    $raw ?? $sl.Array !! $sl.Array.map({ Slope::Scale.new($_) });
   }
 
   method get_type is also<get-type> {
     state ($n, $t);
+
     unstable_get_type( self.^name, &slope_figure_get_type, $n, $t );
   }
 
   method get_view is also<get-view> {
-    ::('Slope::View').new( slope_figure_get_view($!f) );
+    my $v = slope_figure_get_view($!f);
+
+    $v ?? ::('Slope::View').new($v) !! Nil;
   }
 
   method write_to_png (Str() $filename, Int() $width, Int() $height)
     is also<write-to-png>
   {
-    my gint ($w, $h) = resolve-int($width, $height);
+    my gint ($w, $h) = ($width, $height);
+
     slope_figure_write_to_png($!f, $filename, $w, $h);
   }
 

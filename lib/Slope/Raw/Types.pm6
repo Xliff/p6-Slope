@@ -12,7 +12,7 @@ unit package Slope::Raw::Types;
 our subset CairoObject is export of Mu where Cairo::Context | cairo_t;
 
 # Number of times a forced compile has been requested.
-constant forced = 4;
+constant forced = 5;
 
 constant slope is export = 'slope',v0;
 
