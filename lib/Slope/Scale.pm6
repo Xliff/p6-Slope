@@ -7,12 +7,12 @@ use Slope::Raw::Types;
 
 use Slope::Raw::Scale;
 
-use GTK::Compat::GList;
+use GLib::GList;
 
 use Slope::Figure;
 use Slope::View;
 
-use GTK::Compat::Roles::ListData;
+use GLib::Roles::ListData;
 use GTK::Compat::Roles::Object;
 use GTK::Roles::Protection;
 
@@ -154,7 +154,7 @@ class Slope::Scale {
     return Nil unless $il;
     return $il if     $glist;
 
-    $il = GTK::Compat::GList.new($il)
+    $il = GLib::GList.new($il)
         but GTK::Compat::Roles::GListData[SlopeItem];
 
     $raw ?? $il.Array !! $il.Array.map({ Slope::Item.new($_) });

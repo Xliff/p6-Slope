@@ -1,6 +1,6 @@
 Cairo
-GTK::Compat::GList
-GTK::Compat::Roles::ListData
+GLib::GList
+GLib::Roles::ListData
 GTK::Compat::Roles::Object
 GTK::Compat::Roles::TypedBuffer
 GTK::Compat::Types

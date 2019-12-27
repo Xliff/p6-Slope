@@ -9,13 +9,13 @@ use GTK::Raw::Utils;
 
 use Slope::Raw::Item;
 
-use GTK::Compat::GList;
+use GLib::GList;
 
 use Slope::Figure;
 use Slope::Scale;
 
 use GTK::Compat::Roles::Object;
-use GTK::Compat::Roles::ListData;
+use GLib::Roles::ListData;
 use GTK::Roles::Protection;
 
 our subset SlopeItemAncestry is export of Mu
@@ -139,7 +139,7 @@ class Slope::Item {
     return Nil unless $sl;
     return $sl if     $glist;
 
-    $sl = GTK::Compat::GList.new($sl)
+    $sl = GLib::GList.new($sl)
       but GTK::Compat::Roles::GListData[SlopeItem];
 
     $raw ?? $sl.Array !! $sl.Array.map({ Slope::Item.new($_) });

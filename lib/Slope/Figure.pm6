@@ -9,7 +9,7 @@ use Slope::Raw::Types;
 
 use Slope::Raw::Figure;
 
-use GTK::Compat::GList;
+use GLib::GList;
 
 use GTK::Compat::Roles::Object;
 
@@ -92,8 +92,8 @@ class Slope::Figure {
     return Nil unless $sl;
     return $sl if     $glist;
 
-    $sl = GTK::Compat::GList.new($sl)
-      but GTK::Compat::Roles::ListData[SlopeScale];
+    $sl = GLib::GList.new($sl)
+      but GLib::Roles::ListData[SlopeScale];
 
     $raw ?? $sl.Array !! $sl.Array.map({ Slope::Scale.new($_) });
   }

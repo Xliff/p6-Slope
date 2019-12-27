@@ -8,9 +8,9 @@ use Slope::Raw::Types;
 
 use Slope::Raw::Sampler;
 
-use GTK::Compat::GList;
+use GLib::GList;
 
-use GTK::Compat::Roles::ListData;
+use GLib::Roles::ListData;
 use GTK::Compat::Roles::TypedBuffer;
 
 # Boxed type.
@@ -115,7 +115,7 @@ class Slope::Sampler {
     return Nil unless $sl;
     return $sl if     $glist;
 
-    $sl = GTK::Compat::GList.new($sl)
+    $sl = GLib::GList.new($sl)
       but GTK::Compat::Roles::GListData[SlopeSample];
 
     $sl.Array;
