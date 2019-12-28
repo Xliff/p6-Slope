@@ -13,14 +13,14 @@ use Slope::Figure;
 use Slope::View;
 
 use GLib::Roles::ListData;
-use GTK::Compat::Roles::Object;
+use GLib::Roles::Object;
 use GTK::Roles::Protection;
 
 our subset SlopeScaleAncestry is export of Mu
   where SlopeScale | GObject;
 
 class Slope::Scale {
-  also does GTK::Compat::Roles::Object;
+  also does GLib::Roles::Object;
   also does GTK::Roles::Protection;
 
   has SlopeScale $!s is implementor;

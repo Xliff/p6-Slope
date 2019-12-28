@@ -14,7 +14,7 @@ use GLib::GList;
 use Slope::Figure;
 use Slope::Scale;
 
-use GTK::Compat::Roles::Object;
+use GLib::Roles::Object;
 use GLib::Roles::ListData;
 use GTK::Roles::Protection;
 
@@ -22,7 +22,7 @@ our subset SlopeItemAncestry is export of Mu
   where SlopeItem | GObject;
 
 class Slope::Item {
-  also does GTK::Compat::Roles::Object;
+  also does GLib::Roles::Object;
   also does GTK::Roles::Protection;
 
   has SlopeItem $!i is implementor;

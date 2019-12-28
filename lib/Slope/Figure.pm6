@@ -11,10 +11,10 @@ use Slope::Raw::Figure;
 
 use GLib::GList;
 
-use GTK::Compat::Roles::Object;
+use GLib::Roles::Object;
 
 class Slope::Figure {
-  also does GTK::Compat::Roles::Object;
+  also does GLib::Roles::Object;
 
   has SlopeFigure $!f is implementor;
 
