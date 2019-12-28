@@ -1,8 +1,8 @@
 Cairo
 GLib::GList
 GLib::Roles::ListData
+GLib::Roles::TypedBuffer
 GTK::Compat::Roles::Object
-GTK::Compat::Roles::TypedBuffer
 GTK::Compat::Types
 GTK::DrawingArea
 GTK::Raw::Types

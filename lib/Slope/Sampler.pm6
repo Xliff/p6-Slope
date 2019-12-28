@@ -11,7 +11,7 @@ use Slope::Raw::Sampler;
 use GLib::GList;
 
 use GLib::Roles::ListData;
-use GTK::Compat::Roles::TypedBuffer;
+use GLib::Roles::TypedBuffer;
 
 # Boxed type.
 
@@ -80,7 +80,7 @@ class Slope::Sampler {
     @pi_samples;
 
     # my $ap = $slope_sampler_pi_samples_array
-    #   but GTK::Compat::Roles::TypedBuffer[SlopeSample];
+    #   but GLib::Roles::TypedBuffer[SlopeSample];
     # @pi_samples[$_] = $ap[$_] for ^PI_SAMPLES;
     # @pi_samples;
   }
@@ -128,7 +128,7 @@ class Slope::Sampler {
   multi method set_samples(@array) {
     return unless @array;
 
-    my $buff = GTK::Compat::Roles::TypedBuffer[SlopeSample].new(@array);
+    my $buff = GLib::Roles::TypedBuffer[SlopeSample].new(@array);
     samewith($buff.p, @array.elems);
   }
   multi method set_samples (Pointer $sample_array, Int() $n_samples) {
