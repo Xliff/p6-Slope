@@ -53,7 +53,7 @@ class SlopeSample is repr('CStruct') does GLib::Roles::Pointers is export {
 
   method label is rw {
     Proxy.new:
-      FETCH => -> $ { $!label },
+      FETCH => sub ($) { $!label },
       STORE => -> $, Str() $nv {
         nqp::bindattr(
           nqp::decont(self),
@@ -79,7 +79,7 @@ class SlopeSampler is repr('CStruct') does GLib::Roles::Pointers is export {
 
   method sample_list is rw {
     Proxy.new:
-      FETCH => -> $ { $!sample_list },
+      FETCH => sub ($) { $!sample_list },
       STORE => -> $, GList() $nv {
         nqp::bindattr(
           nqp::decont(self),
