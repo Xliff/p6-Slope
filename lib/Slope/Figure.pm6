@@ -4,12 +4,9 @@ use Cairo;
 
 use Method::Also;
 
-
-use Slope::Raw::Types;
-
-use Slope::Raw::Figure;
-
 use GLib::GList;
+use Slope::Raw::Types;
+use Slope::Raw::Figure;
 
 use GLib::Roles::Object;
 
@@ -25,14 +22,12 @@ class Slope::Figure {
   }
 
   multi method new (SlopeFigure $figure) {
-    return unless $figure;
-
-    self.bless( :$figure );
+    $figure ?? self.bless( :$figure ) !! Nil;
   }
   multi method new {
-    my $f = slope_figure_new();
+    my $figure = slope_figure_new();
 
-    $f ?? self.bless( figure => $f ) !! Nil;
+    $figure ?? self.bless( :$figure ) !! Nil;
   }
 
   method Slope::Raw::Types::SlopeFigure
@@ -77,23 +72,26 @@ class Slope::Figure {
     slope_figure_draw($!f, $rect, $cr);
   }
 
-  method get_legend is also<get-legend> {
+  method get_legend (:$raw = False) is also<get-legend> {
     my $l = slope_figure_get_legend($!f);
 
-    $l ?? ::('Slope::Legend').new($l) !! Nil;
+    $l ??
+      ( $raw ?? $l !! ::('Slope::Legend').new($l) )
+      !!
+      Nil;
   }
 
   method get_scale_list (:$glist = False, :$raw = False)
     is also<get-scale-list>
   {
-    # Needs definedness check!
     my $sl = slope_figure_get_scale_list($!f);
 
     return Nil unless $sl;
-    return $sl if     $glist;
+    return $sl if     $glist and $raw;
 
-    $sl = GLib::GList.new($sl)
-      but GLib::Roles::ListData[SlopeScale];
+    $sl = GLib::GList.new($sl) but GLib::Roles::ListData[SlopeScale];
+
+    return $sl if $glist;
 
     $raw ?? $sl.Array !! $sl.Array.map({ Slope::Scale.new($_) });
   }
@@ -104,10 +102,13 @@ class Slope::Figure {
     unstable_get_type( self.^name, &slope_figure_get_type, $n, $t );
   }
 
-  method get_view is also<get-view> {
+  method get_view (:$raw = False) is also<get-view> {
     my $v = slope_figure_get_view($!f);
 
-    $v ?? ::('Slope::View').new($v) !! Nil;
+    $v ??
+      ( $raw ?? $v !! ::('Slope::View').new($v) )
+      !!
+      Nil;
   }
 
   method write_to_png (Str() $filename, Int() $width, Int() $height)

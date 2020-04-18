@@ -2,7 +2,6 @@ use v6.c;
 
 use NativeCall;
 
-
 use Slope::Raw::Types;
 
 unit package Slope::Raw::Figure;
