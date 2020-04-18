@@ -4,7 +4,7 @@ use nqp;
 
 use Cairo;
 
-use GTK::Compat::Types;
+
 use GTK::Roles::Pointers;
 
 unit package Slope::Raw::Types;

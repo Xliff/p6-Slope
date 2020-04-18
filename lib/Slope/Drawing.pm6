@@ -4,7 +4,7 @@ use Cairo;
 
 use Method::Also;
 
-use GTK::Compat::Types;
+
 use Slope::Raw::Types;
 
 use GTK::Raw::Utils;

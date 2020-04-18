@@ -3,7 +3,7 @@ use v6.c;
 use Method::Also;
 use NativeCall;
 
-use GTK::Compat::Types;
+
 use Slope::Raw::Types;
 
 use Slope::Raw::Sampler;

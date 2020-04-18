@@ -2,7 +2,7 @@ use v6.c;
 
 use NativeCall;
 
-use GTK::Compat::Types;
+
 use Slope::Raw::Types;
 
 unit package Slope::Raw::Legend;
