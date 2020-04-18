@@ -2,7 +2,6 @@ use v6.c;
 
 use NativeCall;
 
-
 use Slope::Raw::Types;
 
 unit package Slope::Raw::Drawing;
@@ -22,7 +21,12 @@ sub slope_cairo_line (cairo_t $cr, SlopePoint $p1, SlopePoint $p2)
   is export
   { * }
 
-sub slope_cairo_line_cosmetic (cairo_t $cr, SlopePoint $p1, SlopePoint $p2, gdouble $width)
+sub slope_cairo_line_cosmetic (
+  cairo_t $cr,
+  SlopePoint $p1,
+  SlopePoint $p2,
+  gdouble $width
+)
   is native(slope)
   is export
   { * }

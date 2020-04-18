@@ -4,11 +4,7 @@ use Cairo;
 
 use Method::Also;
 
-
 use Slope::Raw::Types;
-
-use GTK::Raw::Utils;
-
 use Slope::Raw::Drawing;
 
 class Slope::Drawing {
@@ -26,12 +22,14 @@ class Slope::Drawing {
   { $!d }
 
   method new (CairoObject $c is copy) {
+    return Nil unless $c;
     $c .= Context if $c ~~ Cairo::Context;
     self.bless( cairo => $c );
   }
 
   method circle (SlopePoint $center, Num() $radius) {
     my gdouble $r = $radius;
+
     slope_cairo_circle($!d, $center, $r);
   }
 
@@ -47,6 +45,7 @@ class Slope::Drawing {
     is also<line-cosmetic>
   {
     my gdouble $w = $width;
+
     slope_cairo_line_cosmetic($!d, $p1, $p2, $w);
   }
 
@@ -56,11 +55,13 @@ class Slope::Drawing {
 
   method round_rect (SlopeRect $rec, Num() $rad) is also<round-rect> {
     my gdouble $r = $rad;
+
     slope_cairo_round_rect($!d, $rec, $r);
   }
 
   method set_antialias (Int() $antialias) is also<set-antialias> {
-    my gboolean $aa = resolve-bool($antialias);
+    my gboolean $aa = $antialias.so.Int;
+
     slope_cairo_set_antialias($!d, $aa);
   }
 
@@ -70,6 +71,7 @@ class Slope::Drawing {
 
   method text (Num() $x, Num() $y, Str() $utf8) {
     my gdouble ($xx, $yy) = ($x, $y);
+
     slope_cairo_text($!d, $xx, $yy, $utf8);
   }
 
@@ -81,6 +83,7 @@ class Slope::Drawing {
     is also<slope-rect-contains>
   {
     my gdouble ($xx, $yy) = ($x, $y);
+
     slope_rect_contains($rect, $xx, $yy);
   }
 
@@ -93,6 +96,7 @@ class Slope::Drawing {
 
   method slope_similar (Num() $x1, Num() $x2) is also<slope-similar> {
     my gdouble ($xx1, $xx2) = ($x1, $x2);
+
     slope_similar($xx1, $xx2);
   }
 
