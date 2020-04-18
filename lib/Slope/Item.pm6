@@ -2,53 +2,45 @@ use v6.c;
 
 use Method::Also;
 
-
 use Slope::Raw::Types;
-
-use GTK::Raw::Utils;
-
 use Slope::Raw::Item;
 
 use GLib::GList;
-
 use Slope::Figure;
 use Slope::Scale;
 
 use GLib::Roles::Object;
 use GLib::Roles::ListData;
-use GTK::Roles::Protection;
 
 our subset SlopeItemAncestry is export of Mu
   where SlopeItem | GObject;
 
 class Slope::Item {
   also does GLib::Roles::Object;
-  also does GTK::Roles::Protection;
 
   has SlopeItem $!i is implementor;
 
   submethod BUILD (:$item) {
-    self.ADD-PREFIX('Slope::');
-
-    self.setItem($item) if $item;
+    self.setSlopeItem($item) if $item;
   }
 
   method Slope::Raw::Types::SlopeItem
     is also<SlopeItem>
   { $!i }
 
-  method setItem (SlopeItem $item) {
-    self.IS-PROTECTED;
+  method setSlopeItem (SlopeItemAncestry $_) {
+    my $to-parent;
 
-    $!i = $item;
+    $!i = do {
+      when    SlopeItem { $_ }
+      default           { cast(SlopeItem, $_) }
+    }
 
     self.roleInit-Object;
   }
 
-  method new (SlopeItem $item) {
-    return unless $item;
-
-    self.bless(:$item);
+  method new (SlopeItemAncestry $item) {
+    $item ?? self.bless(:$item) !! Nil;
   }
 
   method is_managed is rw is also<is-managed> {
@@ -137,10 +129,12 @@ class Slope::Item {
     my $sl = slope_item_get_subitem_list($!i);
 
     return Nil unless $sl;
-    return $sl if     $glist;
+    return $sl if     $glist && $raw;
 
     $sl = GLib::GList.new($sl)
       but GTK::Compat::Roles::GListData[SlopeItem];
+
+    return $sl if $glist;
 
     $raw ?? $sl.Array !! $sl.Array.map({ Slope::Item.new($_) });
   }
