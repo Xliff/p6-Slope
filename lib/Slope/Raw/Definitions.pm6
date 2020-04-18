@@ -2,11 +2,14 @@ use v6.c;
 
 use Cairo;
 
+use GLib::Raw::Definitions;
+use GLib::Raw::Structs;
+
 use GLib::Roles::Pointers;
 
-unit package Slope::Raw::Types;
+unit package Slope::Raw::Definitions;
 
-our subset CairoObject is export of Mu where Cairo::Context | cairo_t;
+our subset CairoObject is export of Mu where Cairo::Context | Cairo::cairo_t;
 
 # Number of times a forced compile has been requested.
 constant forced = 5;
@@ -25,26 +28,26 @@ class SlopeXyAxis      is repr<CPointer> does GLib::Roles::Pointers is export { 
 class SlopeXyScale     is repr<CPointer> does GLib::Roles::Pointers is export { }
 class SlopeXySeries    is repr<CPointer> does GLib::Roles::Pointers is export { }
 
-class SlopePoint is repr('CStruct') does GTK::Roles::Pointers is export {
+class SlopePoint is repr<CStruct> does GLib::Roles::Pointers is export {
   has gdouble $.x is rw;
   has gdouble $.y is rw;
 }
 
-class SlopeRect  is repr('CStruct') does GTK::Roles::Pointers is export {
+class SlopeRect  is repr<CStruct> does GLib::Roles::Pointers is export {
   has gdouble $.x      is rw;
   has gdouble $.y      is rw;
   has gdouble $.width  is rw;
   has gdouble $.height is rw;
 }
 
-class SlopeMouseEvent is repr('CStruct') does GTK::Roles::Pointers is export {
+class SlopeMouseEvent is repr<CStruct> does GLib::Roles::Pointers is export {
   has gdouble $.x      is rw;
   has gdouble $.y      is rw;
   has guint32 $.button is rw;
   has guint32 $.type   is rw;
 }
 
-class SlopeSample is repr('CStruct') does GTK::Roles::Pointers is export {
+class SlopeSample is repr<CStruct> does GLib::Roles::Pointers is export {
   has gdouble $.coord is rw;
   has Str     $!label;
 
@@ -60,7 +63,7 @@ class SlopeSample is repr('CStruct') does GTK::Roles::Pointers is export {
 
 }
 
-class SlopeSampler is repr('CStruct') does GTK::Roles::Pointers is export {
+class SlopeSampler is repr<CStruct> does GLib::Roles::Pointers is export {
   has GList   $!sample_list;
   has guint32 $.mode is rw;
   has gdouble $.min  is rw;
