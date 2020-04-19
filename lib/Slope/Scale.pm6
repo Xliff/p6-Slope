@@ -21,10 +21,10 @@ class Slope::Scale {
   has SlopeScale $!s is implementor;
 
   submethod BUILD (:$scale) {
-    self.setScale($scale) if $scale;
+    self.setSlopeScale($scale) if $scale;
   }
 
-  method setScale(SlopeScaleAncestry $_) {
+  method setSlopeScale(SlopeScaleAncestry $_) {
     my $to-parent;
 
     $!s = do {
