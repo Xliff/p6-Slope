@@ -3,9 +3,7 @@ use v6.c;
 use Method::Also;
 use NativeCall;
 
-
 use Slope::Raw::Types;
-
 use Slope::Raw::Sampler;
 
 use GLib::GList;
@@ -28,12 +26,12 @@ class Slope::Sampler {
   multi method new (SlopeSampler $sampler) {
     return unless $sampler;
 
-    self.bless(:$sampler);
+    $sampler ?? self.bless(:$sampler) !! Nil;
   }
   multi method new {
-    my $s = slope_sampler_new();
+    my $sampler = slope_sampler_new();
 
-    $s ?? self.bless( sampler => $s) !! Nil;
+    $sampler ?? self.bless(:$sampler) !! Nil;
   }
 
   method month_samples {
@@ -109,14 +107,15 @@ class Slope::Sampler {
     slope_sampler_get_mode($!s);
   }
 
-  method get_sample_list (:$glist = False) is also<get-sample-list> {
+  method get_sample_list (:$glist = False, :$raw = False)
+    is also<get-sample-list>
+  {
     my $sl = slope_sampler_get_sample_list($!s);
 
     return Nil unless $sl;
-    return $sl if     $glist;
+    return $sl if     $glist && $raw;
 
-    $sl = GLib::GList.new($sl)
-      but GTK::Compat::Roles::GListData[SlopeSample];
+    $sl = GLib::GList.new($sl) but GTK::Compat::Roles::GListData[SlopeSample];
 
     $sl.Array;
   }
