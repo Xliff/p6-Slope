@@ -89,8 +89,10 @@ class Slope::Legend is Slope::Item {
       FETCH => sub ($) {
         slope_legend_get_stroke_color($!l);
       },
-      STORE => sub ($, SlopeColor $color is copy) {
-        slope_legend_set_stroke_color($!l, $color);
+      STORE => sub ($, Int() $color is copy) {
+        my SlopeColor $c = $color;
+
+        slope_legend_set_stroke_color($!l, $c);
       }
     );
   }

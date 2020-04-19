@@ -33,8 +33,10 @@ class Slope::Drawing {
     slope_cairo_circle($!d, $center, $r);
   }
 
-  method draw (SlopeColor $stroke, SlopeColor $fill) {
-    slope_cairo_draw($!d, $stroke, $fill);
+  method draw (Int() $stroke, Int() $fill) {
+    my SlopeColor ($s, $f) = ($stroke, $fill);
+
+    slope_cairo_draw($!d, $s, $f);
   }
 
   method line (SlopePoint $p1, SlopePoint $p2) {
@@ -65,8 +67,10 @@ class Slope::Drawing {
     slope_cairo_set_antialias($!d, $aa);
   }
 
-  method set_color (SlopeColor $color) is also<set-color> {
-    slope_cairo_set_color($!d, $color);
+  method set_color (Int() $color) is also<set-color> {
+    my SlopeColor $c = $color;
+
+    slope_cairo_set_color($!d, $c);
   }
 
   method text (Num() $x, Num() $y, Str() $utf8) {
