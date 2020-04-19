@@ -30,7 +30,7 @@ class Slope::Figure {
     $figure ?? self.bless( :$figure ) !! Nil;
   }
 
-  method Slope::Raw::Types::SlopeFigure
+  method Slope::Raw::Definitions::SlopeFigure
     is also<
       SlopeFigure
       Figure

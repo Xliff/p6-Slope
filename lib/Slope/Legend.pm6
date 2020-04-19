@@ -30,7 +30,7 @@ class Slope::Legend is Slope::Item {
     self.setSlopeItem($to-parent);
   }
 
-  method Slope::Raw::Types::SlopeLegend
+  method Slope::Raw::Definitions::SlopeLegend
     is also<
       SlopeLegend
       Legend

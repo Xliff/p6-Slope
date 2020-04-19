@@ -41,7 +41,7 @@ class Slope::View is GTK::DrawingArea {
     self.setDrawingArea($to-parent);
   }
 
-  method Slope::Raw::Types::SlopeView
+  method Slope::Raw::Definitions::SlopeView
     is also<SlopeView>
   { $!v }
 

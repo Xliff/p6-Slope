@@ -35,7 +35,7 @@ class Slope::Scale {
     self.roleInit-Object;
   }
 
-  method Slope::Raw::Types::SlopeScale
+  method Slope::Raw::Definitions::SlopeScale
     is also<SlopeScale>
   { $!s }
 

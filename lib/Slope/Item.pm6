@@ -24,7 +24,7 @@ class Slope::Item {
     self.setSlopeItem($item) if $item;
   }
 
-  method Slope::Raw::Types::SlopeItem
+  method Slope::Raw::Definitions::SlopeItem
     is also<SlopeItem>
   { $!i }
 

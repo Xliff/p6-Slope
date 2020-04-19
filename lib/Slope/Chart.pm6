@@ -2,8 +2,8 @@ use v6.c;
 
 use Method::Also;
 
-use Slope::Raw::Chart;
 use Slope::Raw::Types;
+use Slope::Raw::Chart;
 
 use GTK::Window;
 use GTK::Widget;
@@ -41,6 +41,10 @@ class Slope::Chart is GTK::Window {
     }
     self.setWindow($to-parent);
   }
+
+  method Slope::Raw::Definitions::SlopeChart
+    is also<SlopeChart>
+  { $!c }
 
   multi method new (SlopeChartAncestry $chart) {
     $chart ?? self.bless( :$chart ) !! Nil;

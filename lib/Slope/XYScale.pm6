@@ -35,7 +35,7 @@ class Slope::XYScale is Slope::Scale {
     self.setSlopeScale($to-parent);
   }
 
-  method Slope::Raw::Types::SlopeXyScale
+  method Slope::Raw::Definitions::SlopeXyScale
     is also<SlopeXyScale>
   { $!xys }
 

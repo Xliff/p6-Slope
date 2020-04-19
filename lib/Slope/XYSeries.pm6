@@ -35,7 +35,7 @@ class Slope::XYSeries is Slope::Item {
     self.setSlopeItem($to-parent);
   }
 
-  method Slope::Raw::Types::SlopeXySeries
+  method Slope::Raw::Definitions::SlopeXySeries
     is also<
       SlopeXySeries
       XySeries
