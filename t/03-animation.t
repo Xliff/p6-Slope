@@ -2,16 +2,11 @@ use v6.c;
 
 use Slope::Raw::Types;
 
-use GTK::Compat::Types;
-use GTK::Raw::Utils;
-
+use GLib::Timeout;
 use GTK::Application;
-
 use Slope::Chart;
 use Slope::XYScale;
 use Slope::XYSeries;
-
-use GTK::Compat::Threads;
 
 # Pushing this to 200 seems to cause the event loop to go too long.
 constant POINTS = 100;
@@ -52,7 +47,7 @@ sub MAIN {
     # Must allow time for GTK to leave the activate thread.
     $*SCHEDULER.cue({
       say "Starting...";
-      GTK::Compat::Threads.add_timeout(30, -> $ --> guint { on_tick });
+      GLib::Timeout.add(30, -> $ --> guint { on_tick });
     }, in => 0.1);
   });
 
