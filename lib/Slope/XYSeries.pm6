@@ -3,34 +3,36 @@ use v6.c;
 use Method::Also;
 use NativeCall;
 
-
 use Slope::Raw::Types;
-
-use GTK::Raw::Utils;
-
 use Slope::Raw::XYSeries;
 
 use Slope::Item;
 
-our subset XYSeriesAncestry is export of Mu
+our subset SlopeXYSeriesAncestry is export of Mu
   where SlopeXySeries | SlopeItemAncestry;
 
 class Slope::XYSeries is Slope::Item {
   has SlopeXySeries $!xys;
 
   submethod BUILD (:$series) {
+    self.setSlopeXYSeries($series);
+  }
+
+  method setSlopeXYSeries (SlopeXYSeriesAncestry $_) {
     my $to-parent;
-    $!xys = do given $series {
+
+    $!xys = do {
       when SlopeXySeries {
         $to-parent = cast(SlopeItem, $_);
         $_;
       }
+
       default {
         $to-parent = $_;
         cast(SlopeLegend, $_);
       }
     }
-    self.setItem($to-parent);
+    self.setSlopeItem($to-parent);
   }
 
   method Slope::Raw::Types::SlopeXySeries
@@ -40,22 +42,26 @@ class Slope::XYSeries is Slope::Item {
     >
   { $!xys }
 
-  multi method new (XYSeriesAncestry $series) {
-    self.bless(:$series);
+  multi method new (SlopeXYSeriesAncestry $series) {
+    $series ?? self.bless(:$series) !! Nil;
   }
   multi method new {
-    self.bless( series => slope_xyseries_new() );
+    my $series = slope_xyseries_new();
+
+    $series ?? self.bless(:$series) !! Nil;
   }
 
   method !xy_to_vec ( @xy where so *.all.elems == 2 ) {
     my ($x_vec, $y_vec) = CArray[gdouble].new xx 2;
     my glong $np = @xy.elems;
-    ($x_vec[$_], $y_vec[$_]) = |@xy[$_] for ^$np;
+
+    ($x_vec[$_], $y_vec[$_]) = |@xy[$_] for @xy;
     ($x_vec, $y_vec, $np);
   }
   method !x_and_y_to_vec (@x, @y) {
     my ($x_vec, $y_vec) = CArray[gdouble].new xx 2;
     my glong $np = (@x.elems, @y.elems).min;
+
     ($x_vec[$_], $y_vec[$_]) = (@x[$_], @y[$_]) for ^$np;
     ($x_vec, $y_vec, $np);
   }
@@ -82,14 +88,15 @@ class Slope::XYSeries is Slope::Item {
     Int() $n_pts,
     Str() $style
   ) {
-    my glong $np = resolve-int64($n_pts);
-    self.bless(
-      series => slope_xyseries_new_filled($name, $x_vec, $y_vec, $np, $style)
-    );
+    my glong $np = $n_pts;
+    my $series = slope_xyseries_new_filled($name, $x_vec, $y_vec, $np, $style);
+
+    $series ?? self.bless(:$series) !! Nil;
   }
 
   method get_type is also<get-type> {
     state ($n, $t);
+
     unstable_get_type( self.^name, &slope_xyseries_get_type, $n, $t);
   }
 
@@ -108,7 +115,8 @@ class Slope::XYSeries is Slope::Item {
     CArray[gdouble] $y_vec,
     Int() $n_pts
   ) {
-    my glong $np = resolve-int64($n_pts);
+    my glong $np = $n_pts;
+
     slope_xyseries_set_data($!xys, $x_vec, $y_vec, $np);
   }
 
@@ -135,7 +143,8 @@ class Slope::XYSeries is Slope::Item {
     CArray[gdouble] $y_vec,
     Int() $n_pts
   ) {
-    my glong $np = resolve-int64($n_pts);
+    my glong $np = $n_pts;
+
     slope_xyseries_update_data($!xys, $x_vec, $y_vec, $np);
   }
 
