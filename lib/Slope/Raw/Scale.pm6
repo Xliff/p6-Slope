@@ -2,7 +2,6 @@ use v6.c;
 
 use NativeCall;
 
-
 use Slope::Raw::Types;
 
 sub slope_scale_add_item (SlopeScale $self, SlopeItem $item)

@@ -2,39 +2,36 @@ use v6.c;
 
 use Method::Also;
 
-
 use Slope::Raw::Types;
-
 use Slope::Raw::Scale;
 
 use GLib::GList;
-
 use Slope::Figure;
 use Slope::View;
 
 use GLib::Roles::ListData;
 use GLib::Roles::Object;
-use GTK::Roles::Protection;
 
 our subset SlopeScaleAncestry is export of Mu
   where SlopeScale | GObject;
 
 class Slope::Scale {
   also does GLib::Roles::Object;
-  also does GTK::Roles::Protection;
 
   has SlopeScale $!s is implementor;
 
   submethod BUILD (:$scale) {
-    self.ADD-PREFIX('Slope::');
-
     self.setScale($scale) if $scale;
   }
 
-  method setScale(SlopeScaleAncestry $scale) {
-    self.IS-PROTECTED;
+  method setScale(SlopeScaleAncestry $_) {
+    my $to-parent;
 
-    $!s = $scale;
+    $!s = do {
+      when    SlopeScale { $_ }
+      default            { cast(SlopeScale, $_) }
+    }
+
     self.roleInit-Object;
   }
 
@@ -43,8 +40,7 @@ class Slope::Scale {
   { $!s }
 
   method new (SlopeScale $scale) {
-    return unless $scale;
-    self.bless(:$scale);
+    $scale ?? self.bless(:$scale) !! Nil;
   }
 
   method background_color is rw is also<background-color> {
@@ -152,10 +148,12 @@ class Slope::Scale {
     my $il = slope_scale_get_item_list($!s);
 
     return Nil unless $il;
-    return $il if     $glist;
+    return $il if     $glist && $raw;
 
     $il = GLib::GList.new($il)
         but GTK::Compat::Roles::GListData[SlopeItem];
+
+    return $il if $glist;
 
     $raw ?? $il.Array !! $il.Array.map({ Slope::Item.new($_) });
   }
