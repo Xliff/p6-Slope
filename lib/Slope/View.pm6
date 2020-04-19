@@ -2,16 +2,10 @@ use v6.c;
 
 use Method::Also;
 
-
-use GTK::Raw::Types;
 use Slope::Raw::Types;
-
-use GTK::Raw::Utils;
-
 use Slope::Raw::View;
 
 use GTK::DrawingArea;
-
 use Slope::Figure;
 
 our subset SlopeViewAncestry is export of Mu
@@ -27,8 +21,24 @@ class Slope::View is GTK::DrawingArea {
   }
 
   submethod BUILD (:$view) {
-    self.ADD-PREFIX('Slope::');
-    self.setDrawingArea( cast(GtkDrawingArea, $!v = $view) );
+    self.setSlopeView($view);
+  }
+
+  method setSlopeView (SlopeViewAncestry $_) {
+    my $to-parent;
+
+    $!v = do {
+      when SlopeView {
+        $to-parent = cast(GtkDrawingArea, $_);
+        $_;
+      }
+
+      default {
+        $to-parent = $_;
+        cast(SlopeView, $_);
+      }
+    }
+    self.setDrawingArea($to-parent);
   }
 
   method Slope::Raw::Types::SlopeView
@@ -36,20 +46,29 @@ class Slope::View is GTK::DrawingArea {
   { $!v }
 
   multi method new (SlopeViewAncestry $view) {
-    self.bless(:$view);
+    $view ?? self.bless(:$view) !! Nil;
   }
   multi method new {
-    self.bless( view => slope_view_new() );
+    my $view = slope_view_new();
+
+    $view ?? self.bless(:$view) !! Nil;
   }
 
   method new_with_figure (SlopeFigure() $figure) is also<new-with-figure> {
-    self.bless( view => slope_view_new_with_figure($figure) );
+    my $view = slope_view_new_with_figure($figure);
+
+    $view ?? self.bless(:$view) !! Nil;
   }
 
-  method figure is rw {
+  method figure (:$raw = False) is rw {
     Proxy.new(
       FETCH => sub ($) {
-        Slope::Figure.new( slope_view_get_figure($!v) );
+        my $f = slope_view_get_figure($!v);
+
+        $f ??
+          ( $raw ?? $f !! Slope::Figure.new($f) )
+          !!
+          Nil;
       },
       STORE => sub ($, SlopeFigure() $figure is copy) {
         slope_view_set_figure($!v, $figure);
@@ -59,6 +78,7 @@ class Slope::View is GTK::DrawingArea {
 
   method get_type is also<get-type> {
     state ($n, $t);
+
     unstable_get_type( self.^name, &slope_view_get_type, $n, $t );
   }
 
@@ -69,7 +89,8 @@ class Slope::View is GTK::DrawingArea {
   method write_to_png (Str() $filename, Int() $width, Int() $height)
     is also<write-to-png>
   {
-    my gint ($w, $h) = resolve-int($w, $h);
+    my gint ($w, $h) = ($w, $h);
+
     slope_view_write_to_png($!v, $filename, $w, $h);
   }
 
