@@ -55,7 +55,7 @@ class Slope::XYSeries is Slope::Item {
     my ($x_vec, $y_vec) = CArray[gdouble].new xx 2;
     my glong $np = @xy.elems;
 
-    ($x_vec[$_], $y_vec[$_]) = |@xy[$_] for @xy;
+    ($x_vec[$_], $y_vec[$_]) = @xy[$_] for ^$np;
     ($x_vec, $y_vec, $np);
   }
   method !x_and_y_to_vec (@x, @y) {
