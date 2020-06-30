@@ -10,7 +10,7 @@ use GDK::Raw::Exports;
 use GTK::Raw::Exports;
 use Slope::Raw::Exports;
 
-constant forced = 0;
+my constant forced = 3;
 
 unit package Slope::Raw::Types;
 
