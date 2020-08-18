@@ -1,0 +1,1423 @@
+ === GDK::Raw::Exports === 
+Stage start      :   0.000
+Stage parse      :   3.583
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.002
+Stage mast       :   0.019
+Stage mbc        :   0.009
+Stage moar       :   0.000
+
+GDK::Raw::Exports compile time: 3.9548695
+ === GIO::Raw::Exports === 
+Stage start      :   0.000
+Stage parse      :   3.781
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.002
+Stage mast       :   0.021
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+GIO::Raw::Exports compile time: 4.1734291
+ === GDK::Raw::Definitions === 
+Stage start      :   0.000
+Stage parse      :   4.166
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.009
+Stage mast       :   0.006
+Stage mbc        :   0.002
+Stage moar       :   0.000
+
+GDK::Raw::Definitions compile time: 4.458276
+ === GLib::Raw::Exports === 
+Stage start      :   0.000
+Stage parse      :   3.787
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.015
+Stage mast       :   0.003
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+GLib::Raw::Exports compile time: 4.2913891
+ === GDK::Raw::Enums === 
+Stage start      :   0.000
+Stage parse      :   4.084
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.006
+Stage mast       :   0.042
+Stage mbc        :   0.006
+Stage moar       :   0.000
+
+GDK::Raw::Enums compile time: 4.54246286
+ === Cairo === 
+Stage start      :   0.000
+Stage parse      :   4.379
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.003
+Stage mast       :   0.015
+Stage mbc        :   0.003
+Stage moar       :   0.000
+
+Cairo compile time: 4.7052185
+ === GDK::Raw::Subs === 
+Stage start      :   0.000
+Stage parse      :   4.292
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.026
+Stage moar       :   0.000
+
+GDK::Raw::Subs compile time: 4.702918
+ === GIO::Raw::Enums === 
+Stage start      :   0.000
+Stage parse      :   4.202
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.004
+Stage mast       :   0.010
+Stage mbc        :   0.004
+Stage moar       :   0.000
+
+GIO::Raw::Enums compile time: 4.672299
+ === GLib::Raw::Definitions === 
+Stage start      :   0.000
+Stage parse      :   4.227
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.003
+Stage mast       :   0.006
+Stage mbc        :   0.002
+Stage moar       :   0.000
+
+GLib::Raw::Definitions compile time: 4.719857
+ === GLib::Raw::Object === 
+Stage start      :   0.000
+Stage parse      :   4.239
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.002
+Stage moar       :   0.000
+
+GLib::Raw::Object compile time: 4.910632
+ === GLib::Raw::Struct_Subs === 
+Stage start      :   0.000
+Stage parse      :   4.260
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.007
+Stage mast       :   0.003
+Stage mbc        :   0.008
+Stage moar       :   0.000
+
+GLib::Raw::Struct_Subs compile time: 4.87936759
+ === GDK::Raw::Structs === 
+Stage start      :   0.000
+Stage parse      :   4.539
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.002
+Stage moar       :   0.000
+
+GDK::Raw::Structs compile time: 5.06599562
+ === GLib::Raw::Subs === 
+Stage start      :   0.000
+Stage parse      :   4.216
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.004
+Stage mbc        :   0.002
+Stage moar       :   0.000
+
+GLib::Raw::Subs compile time: 4.86424659
+ === GLib::Raw::Enums === 
+Stage start      :   0.000
+Stage parse      :   4.440
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.019
+Stage mast       :   0.017
+Stage mbc        :   0.007
+Stage moar       :   0.000
+
+GLib::Raw::Enums compile time: 5.0226363
+ === GIO::Raw::Subs === 
+Stage start      :   0.000
+Stage parse      :   4.595
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.004
+Stage mbc        :   0.003
+Stage moar       :   0.000
+
+GIO::Raw::Subs compile time: 5.0605628
+ === GIO::Raw::Structs === 
+Stage start      :   0.000
+Stage parse      :   4.759
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.079
+Stage moar       :   0.000
+
+GIO::Raw::Structs compile time: 5.18828553
+ === GLib::GList === 
+Stage start      :   0.000
+Stage parse      :   4.592
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.003
+Stage moar       :   0.000
+
+GLib::GList compile time: 5.1646108
+ === GIO::Raw::Definitions === 
+Stage start      :   0.000
+Stage parse      :   4.879
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.002
+Stage mast       :   0.006
+Stage mbc        :   0.004
+Stage moar       :   0.000
+
+GIO::Raw::Definitions compile time: 5.2296582
+ === GIO::DBus::Raw::Types === 
+Stage start      :   0.000
+Stage parse      :   4.868
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.002
+Stage mast       :   0.006
+Stage mbc        :   0.004
+Stage moar       :   0.000
+
+GIO::DBus::Raw::Types compile time: 5.24969686
+ === GLib::Raw::Structs === 
+Stage start      :   0.000
+Stage parse      :   4.551
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.004
+Stage mbc        :   0.002
+Stage moar       :   0.000
+
+GLib::Raw::Structs compile time: 5.12975
+ === GTK::Raw::Exports === 
+Stage start      :   0.000
+Stage parse      :   3.939
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.002
+Stage mast       :   0.026
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+GTK::Raw::Exports compile time: 4.6136182
+ === GLib::Roles::Pointers === 
+Stage start      :   0.000
+Stage parse      :   4.431
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.007
+Stage mast       :   0.003
+Stage mbc        :   0.017
+Stage moar       :   0.000
+
+GLib::Roles::Pointers compile time: 5.1384
+ === GLib::Roles::ListData === 
+Stage start      :   0.000
+Stage parse      :   5.004
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.003
+Stage moar       :   0.000
+
+GLib::Roles::ListData compile time: 5.7262864
+ === Pango::Raw::Exports === 
+Stage start      :   0.000
+Stage parse      :   3.865
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.002
+Stage mast       :   0.026
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Pango::Raw::Exports compile time: 4.47244783
+ === GTK::Raw::Enums === 
+Stage start      :   0.000
+Stage parse      :   4.392
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.009
+Stage mast       :   0.020
+Stage mbc        :   0.008
+Stage moar       :   0.000
+
+GTK::Raw::Enums compile time: 5.0646264
+ === Slope::Raw::Exports === 
+Stage start      :   0.000
+Stage parse      :   3.898
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.002
+Stage mast       :   0.020
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Slope::Raw::Exports compile time: 4.4721053
+ === Method::Also === 
+Stage start      :   0.000
+Stage parse      :   4.175
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.002
+Stage mast       :   0.014
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Method::Also compile time: 4.7991001
+ === GLib::Roles::TypedBuffer === 
+Stage start      :   0.000
+Stage parse      :   5.172
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.004
+Stage moar       :   0.000
+
+GLib::Roles::TypedBuffer compile time: 5.74820203
+ === GTK::Raw::Subs === 
+Stage start      :   0.000
+Stage parse      :   4.542
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+GTK::Raw::Subs compile time: 5.10731402
+ === Pango::Raw::Definitions === 
+Stage start      :   0.000
+Stage parse      :   4.320
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.004
+Stage mbc        :   0.002
+Stage moar       :   0.000
+
+Pango::Raw::Definitions compile time: 5.0244538
+ === GTK::Raw::Definitions === 
+Stage start      :   0.000
+Stage parse      :   4.848
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.003
+Stage mast       :   0.008
+Stage mbc        :   0.003
+Stage moar       :   0.000
+
+GTK::Raw::Definitions compile time: 5.5552359
+ === Pango::Raw::Enums === 
+Stage start      :   0.000
+Stage parse      :   4.340
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.002
+Stage mast       :   0.019
+Stage mbc        :   0.002
+Stage moar       :   0.000
+
+Pango::Raw::Enums compile time: 5.04781109
+ === GLib::Roles::Object === 
+Stage start      :   0.000
+Stage parse      :   5.573
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.004
+Stage moar       :   0.000
+
+GLib::Roles::Object compile time: 6.2135187
+ === GTK::Raw::Structs === 
+Stage start      :   0.000
+Stage parse      :   4.889
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.004
+Stage moar       :   0.000
+
+GTK::Raw::Structs compile time: 5.5038167
+ === Pango::Raw::Subs === 
+Stage start      :   0.000
+Stage parse      :   4.558
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.003
+Stage moar       :   0.000
+
+Pango::Raw::Subs compile time: 5.36806388
+ === GTK::Raw::Requisition === 
+Stage start      :   0.000
+Stage parse      :   5.341
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.002
+Stage mbc        :   0.002
+Stage moar       :   0.000
+
+GTK::Raw::Requisition compile time: 5.8951756
+ === Pango::Raw::Structs === 
+Stage start      :   0.000
+Stage parse      :   4.801
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.002
+Stage moar       :   0.000
+
+Pango::Raw::Structs compile time: 5.48528989
+ === GTK::DrawingArea === 
+Stage start      :   0.000
+Stage parse      :   7.198
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.002
+Stage mbc        :   0.009
+Stage moar       :   0.000
+
+GTK::DrawingArea compile time: 7.90744157
+ === GTK::Widget === 
+Stage start      :   0.000
+Stage parse      :   6.747
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.002
+Stage mbc        :   0.010
+Stage moar       :   0.000
+
+GTK::Widget compile time: 7.4667034
+ === GTK::Window === 
+Stage start      :   0.000
+Stage parse      :   7.250
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.012
+Stage moar       :   0.000
+
+GTK::Window compile time: 7.925152
+ === Slope::Raw::Subs === 
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Subs.pm6
+    Stage start      :   0.000
+    Stage parse      :   1.711
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.008
+    Stage mast       :   0.063
+    Stage mbc        :   0.002
+Stage parse      :   3.869
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.002
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Slope::Raw::Subs compile time: 4.448292
+ === Slope::Raw::Definitions === 
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Definitions.pm6
+    Stage start      :   0.000
+    Stage parse      :   2.128
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.008
+    Stage mast       :   0.076
+    Stage mbc        :   0.004
+Stage parse      :   4.318
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.004
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Slope::Raw::Definitions compile time: 4.81524999
+ === Slope::Raw::Enums === 
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Enums.pm6
+    Stage start      :   0.000
+    Stage parse      :   2.202
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.012
+    Stage mast       :   0.143
+    Stage mbc        :   0.008
+Stage parse      :   4.521
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Slope::Raw::Enums compile time: 5.07043094
+ === Slope::Raw::Types === 
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Types.pm6
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+    Undeclared routine:
+        re-export used at line 46
+    
+[31m===[0mSORRY![31m===[0m Error while compiling -e
+Stage start      :   0.000
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+Undeclared routine:
+    re-export used at line 46
+
+
+at -e:1
+
+Slope::Raw::Types compile time: 3.05997836
+ === Slope::Raw::XYSeries === 
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/XYSeries.pm6
+    Stage start      :   0.000
+    
+        precomp lib/Slope/Raw/Types.pm6
+        Stage start      :   0.000
+        [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+        Undeclared routine:
+            re-export used at line 46
+        
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/XYSeries.pm6 (Slope::Raw::XYSeries)
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+    Undeclared routine:
+        re-export used at line 46
+    
+    
+    at /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/XYSeries.pm6 (Slope::Raw::XYSeries):5
+[31m===[0mSORRY![31m===[0m Error while compiling -e
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Types.pm6
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+    Undeclared routine:
+        re-export used at line 46
+    
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/XYSeries.pm6 (Slope::Raw::XYSeries)
+Stage start      :   0.000
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+Undeclared routine:
+    re-export used at line 46
+
+
+at /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/XYSeries.pm6 (Slope::Raw::XYSeries):5
+
+at -e:1
+
+Slope::Raw::XYSeries compile time: 6.02644169
+ === Slope::Raw::Item === 
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Item.pm6
+    Stage start      :   0.000
+    
+        precomp lib/Slope/Raw/Types.pm6
+        Stage start      :   0.000
+        [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+        Undeclared routine:
+            re-export used at line 46
+        
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Item.pm6 (Slope::Raw::Item)
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+    Undeclared routine:
+        re-export used at line 46
+    
+    
+    at /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Item.pm6 (Slope::Raw::Item):5
+[31m===[0mSORRY![31m===[0m Error while compiling -e
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Types.pm6
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+    Undeclared routine:
+        re-export used at line 46
+    
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Item.pm6 (Slope::Raw::Item)
+Stage start      :   0.000
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+Undeclared routine:
+    re-export used at line 46
+
+
+at /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Item.pm6 (Slope::Raw::Item):5
+
+at -e:1
+
+Slope::Raw::Item compile time: 8.30865623
+ === Slope::Raw::Legend === 
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Legend.pm6
+    Stage start      :   0.000
+    
+        precomp lib/Slope/Raw/Types.pm6
+        Stage start      :   0.000
+        [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+        Undeclared routine:
+            re-export used at line 46
+        
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Legend.pm6 (Slope::Raw::Legend)
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+    Undeclared routine:
+        re-export used at line 46
+    
+    
+    at /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Legend.pm6 (Slope::Raw::Legend):5
+[31m===[0mSORRY![31m===[0m Error while compiling -e
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Types.pm6
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+    Undeclared routine:
+        re-export used at line 46
+    
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Legend.pm6 (Slope::Raw::Legend)
+Stage start      :   0.000
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+Undeclared routine:
+    re-export used at line 46
+
+
+at /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Legend.pm6 (Slope::Raw::Legend):5
+
+at -e:1
+
+Slope::Raw::Legend compile time: 10.4779739
+ === Slope::Raw::Sampler === 
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Sampler.pm6
+    Stage start      :   0.000
+    
+        precomp lib/Slope/Raw/Types.pm6
+        Stage start      :   0.000
+        [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+        Undeclared routine:
+            re-export used at line 46
+        
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Sampler.pm6 (Slope::Raw::Sampler)
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+    Undeclared routine:
+        re-export used at line 46
+    
+    
+    at /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Sampler.pm6 (Slope::Raw::Sampler):5
+[31m===[0mSORRY![31m===[0m Error while compiling -e
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Types.pm6
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+    Undeclared routine:
+        re-export used at line 46
+    
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Sampler.pm6 (Slope::Raw::Sampler)
+Stage start      :   0.000
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+Undeclared routine:
+    re-export used at line 46
+
+
+at /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Sampler.pm6 (Slope::Raw::Sampler):5
+
+at -e:1
+
+Slope::Raw::Sampler compile time: 12.65001494
+ === Slope::Raw::Chart === 
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Chart.pm6
+    Stage start      :   0.000
+    
+        precomp lib/Slope/Raw/Types.pm6
+        Stage start      :   0.000
+        [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+        Undeclared routine:
+            re-export used at line 46
+        
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Chart.pm6 (Slope::Raw::Chart)
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+    Undeclared routine:
+        re-export used at line 46
+    
+    
+    at /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Chart.pm6 (Slope::Raw::Chart):5
+[31m===[0mSORRY![31m===[0m Error while compiling -e
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Types.pm6
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+    Undeclared routine:
+        re-export used at line 46
+    
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Chart.pm6 (Slope::Raw::Chart)
+Stage start      :   0.000
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+Undeclared routine:
+    re-export used at line 46
+
+
+at /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Chart.pm6 (Slope::Raw::Chart):5
+
+at -e:1
+
+Slope::Raw::Chart compile time: 14.87821652
+ === Slope::Sampler === 
+Stage start      :   0.000
+
+    precomp lib/Slope/Sampler.pm6
+    Stage start      :   0.000
+    
+        precomp lib/Slope/Raw/Types.pm6
+        Stage start      :   0.000
+        [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+        Undeclared routine:
+            re-export used at line 46
+        
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Sampler.pm6 (Slope::Sampler)
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+    Undeclared routine:
+        re-export used at line 46
+    
+    
+    at /home/cbwood/Projects/p6-Slope/lib/Slope/Sampler.pm6 (Slope::Sampler):6
+[31m===[0mSORRY![31m===[0m Error while compiling -e
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Types.pm6
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+    Undeclared routine:
+        re-export used at line 46
+    
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Sampler.pm6 (Slope::Sampler)
+Stage start      :   0.000
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+Undeclared routine:
+    re-export used at line 46
+
+
+at /home/cbwood/Projects/p6-Slope/lib/Slope/Sampler.pm6 (Slope::Sampler):6
+
+at -e:1
+
+Slope::Sampler compile time: 4.50410043
+ === Slope::Raw::XYAxis === 
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/XYAxis.pm6
+    Stage start      :   0.000
+    
+        precomp lib/Slope/Raw/Types.pm6
+        Stage start      :   0.000
+        [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+        Undeclared routine:
+            re-export used at line 46
+        
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/XYAxis.pm6 (Slope::Raw::XYAxis)
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+    Undeclared routine:
+        re-export used at line 46
+    
+    
+    at /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/XYAxis.pm6 (Slope::Raw::XYAxis):5
+[31m===[0mSORRY![31m===[0m Error while compiling -e
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Types.pm6
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+    Undeclared routine:
+        re-export used at line 46
+    
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/XYAxis.pm6 (Slope::Raw::XYAxis)
+Stage start      :   0.000
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+Undeclared routine:
+    re-export used at line 46
+
+
+at /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/XYAxis.pm6 (Slope::Raw::XYAxis):5
+
+at -e:1
+
+Slope::Raw::XYAxis compile time: 17.176581
+ === Slope::Raw::Drawing === 
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Drawing.pm6
+    Stage start      :   0.000
+    
+        precomp lib/Slope/Raw/Types.pm6
+        Stage start      :   0.000
+        [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+        Undeclared routine:
+            re-export used at line 46
+        
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Drawing.pm6 (Slope::Raw::Drawing)
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+    Undeclared routine:
+        re-export used at line 46
+    
+    
+    at /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Drawing.pm6 (Slope::Raw::Drawing):5
+[31m===[0mSORRY![31m===[0m Error while compiling -e
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Types.pm6
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+    Undeclared routine:
+        re-export used at line 46
+    
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Drawing.pm6 (Slope::Raw::Drawing)
+Stage start      :   0.000
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+Undeclared routine:
+    re-export used at line 46
+
+
+at /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Drawing.pm6 (Slope::Raw::Drawing):5
+
+at -e:1
+
+Slope::Raw::Drawing compile time: 19.33735163
+ === Slope::Raw::Figure === 
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Figure.pm6
+    Stage start      :   0.000
+    
+        precomp lib/Slope/Raw/Types.pm6
+        Stage start      :   0.000
+        [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+        Undeclared routine:
+            re-export used at line 46
+        
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Figure.pm6 (Slope::Raw::Figure)
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+    Undeclared routine:
+        re-export used at line 46
+    
+    
+    at /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Figure.pm6 (Slope::Raw::Figure):5
+[31m===[0mSORRY![31m===[0m Error while compiling -e
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Types.pm6
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+    Undeclared routine:
+        re-export used at line 46
+    
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Figure.pm6 (Slope::Raw::Figure)
+Stage start      :   0.000
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+Undeclared routine:
+    re-export used at line 46
+
+
+at /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Figure.pm6 (Slope::Raw::Figure):5
+
+at -e:1
+
+Slope::Raw::Figure compile time: 21.57543215
+ === Slope::Drawing === 
+Stage start      :   0.000
+
+    precomp lib/Slope/Drawing.pm6
+    Stage start      :   0.000
+    
+        precomp lib/Slope/Raw/Types.pm6
+        Stage start      :   0.000
+        [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+        Undeclared routine:
+            re-export used at line 46
+        
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Drawing.pm6 (Slope::Drawing)
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+    Undeclared routine:
+        re-export used at line 46
+    
+    
+    at /home/cbwood/Projects/p6-Slope/lib/Slope/Drawing.pm6 (Slope::Drawing):7
+[31m===[0mSORRY![31m===[0m Error while compiling -e
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Types.pm6
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+    Undeclared routine:
+        re-export used at line 46
+    
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Drawing.pm6 (Slope::Drawing)
+Stage start      :   0.000
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+Undeclared routine:
+    re-export used at line 46
+
+
+at /home/cbwood/Projects/p6-Slope/lib/Slope/Drawing.pm6 (Slope::Drawing):7
+
+at -e:1
+
+Slope::Drawing compile time: 4.6352436
+ === Slope::Raw::XYScale === 
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/XYScale.pm6
+    Stage start      :   0.000
+    
+        precomp lib/Slope/Raw/Types.pm6
+        Stage start      :   0.000
+        [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+        Undeclared routine:
+            re-export used at line 46
+        
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/XYScale.pm6 (Slope::Raw::XYScale)
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+    Undeclared routine:
+        re-export used at line 46
+    
+    
+    at /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/XYScale.pm6 (Slope::Raw::XYScale):5
+[31m===[0mSORRY![31m===[0m Error while compiling -e
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Types.pm6
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+    Undeclared routine:
+        re-export used at line 46
+    
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/XYScale.pm6 (Slope::Raw::XYScale)
+Stage start      :   0.000
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+Undeclared routine:
+    re-export used at line 46
+
+
+at /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/XYScale.pm6 (Slope::Raw::XYScale):5
+
+at -e:1
+
+Slope::Raw::XYScale compile time: 24.03267546
+ === Slope::Raw::View === 
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/View.pm6
+    Stage start      :   0.000
+    
+        precomp lib/Slope/Raw/Types.pm6
+        Stage start      :   0.000
+        [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+        Undeclared routine:
+            re-export used at line 46
+        
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/View.pm6 (Slope::Raw::View)
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+    Undeclared routine:
+        re-export used at line 46
+    
+    
+    at /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/View.pm6 (Slope::Raw::View):5
+[31m===[0mSORRY![31m===[0m Error while compiling -e
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Types.pm6
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+    Undeclared routine:
+        re-export used at line 46
+    
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/View.pm6 (Slope::Raw::View)
+Stage start      :   0.000
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+Undeclared routine:
+    re-export used at line 46
+
+
+at /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/View.pm6 (Slope::Raw::View):5
+
+at -e:1
+
+Slope::Raw::View compile time: 26.3803771
+ === Slope::Figure === 
+Stage start      :   0.000
+
+    precomp lib/Slope/Figure.pm6
+    Stage start      :   0.000
+    
+        precomp lib/Slope/Raw/Types.pm6
+        Stage start      :   0.000
+        [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+        Undeclared routine:
+            re-export used at line 46
+        
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Figure.pm6 (Slope::Figure)
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+    Undeclared routine:
+        re-export used at line 46
+    
+    
+    at /home/cbwood/Projects/p6-Slope/lib/Slope/Figure.pm6 (Slope::Figure):8
+[31m===[0mSORRY![31m===[0m Error while compiling -e
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Types.pm6
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+    Undeclared routine:
+        re-export used at line 46
+    
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Figure.pm6 (Slope::Figure)
+Stage start      :   0.000
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+Undeclared routine:
+    re-export used at line 46
+
+
+at /home/cbwood/Projects/p6-Slope/lib/Slope/Figure.pm6 (Slope::Figure):8
+
+at -e:1
+
+Slope::Figure compile time: 4.963916
+ === Slope::Raw::Scale === 
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Scale.pm6
+    Stage start      :   0.000
+    
+        precomp lib/Slope/Raw/Types.pm6
+        Stage start      :   0.000
+        [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+        Undeclared routine:
+            re-export used at line 46
+        
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Scale.pm6 (Slope::Raw::Scale)
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+    Undeclared routine:
+        re-export used at line 46
+    
+    
+    at /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Scale.pm6 (Slope::Raw::Scale):5
+[31m===[0mSORRY![31m===[0m Error while compiling -e
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Types.pm6
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+    Undeclared routine:
+        re-export used at line 46
+    
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Scale.pm6 (Slope::Raw::Scale)
+Stage start      :   0.000
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+Undeclared routine:
+    re-export used at line 46
+
+
+at /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Scale.pm6 (Slope::Raw::Scale):5
+
+at -e:1
+
+Slope::Raw::Scale compile time: 28.811645
+ === Slope::Chart === 
+Stage start      :   0.000
+
+    precomp lib/Slope/Chart.pm6
+    Stage start      :   0.000
+    
+        precomp lib/Slope/Raw/Types.pm6
+        Stage start      :   0.000
+        [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+        Undeclared routine:
+            re-export used at line 46
+        
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Chart.pm6 (Slope::Chart)
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+    Undeclared routine:
+        re-export used at line 46
+    
+    
+    at /home/cbwood/Projects/p6-Slope/lib/Slope/Chart.pm6 (Slope::Chart):5
+[31m===[0mSORRY![31m===[0m Error while compiling -e
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Types.pm6
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+    Undeclared routine:
+        re-export used at line 46
+    
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Chart.pm6 (Slope::Chart)
+Stage start      :   0.000
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+Undeclared routine:
+    re-export used at line 46
+
+
+at /home/cbwood/Projects/p6-Slope/lib/Slope/Chart.pm6 (Slope::Chart):5
+
+at -e:1
+
+Slope::Chart compile time: 4.559235
+ === Slope::View === 
+Stage start      :   0.000
+
+    precomp lib/Slope/View.pm6
+    Stage start      :   0.000
+    
+        precomp lib/Slope/Raw/Types.pm6
+        Stage start      :   0.000
+        [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+        Undeclared routine:
+            re-export used at line 46
+        
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/View.pm6 (Slope::View)
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+    Undeclared routine:
+        re-export used at line 46
+    
+    
+    at /home/cbwood/Projects/p6-Slope/lib/Slope/View.pm6 (Slope::View):5
+[31m===[0mSORRY![31m===[0m Error while compiling -e
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Types.pm6
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+    Undeclared routine:
+        re-export used at line 46
+    
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/View.pm6 (Slope::View)
+Stage start      :   0.000
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+Undeclared routine:
+    re-export used at line 46
+
+
+at /home/cbwood/Projects/p6-Slope/lib/Slope/View.pm6 (Slope::View):5
+
+at -e:1
+
+Slope::View compile time: 6.7362915
+ === Slope::Scale === 
+Stage start      :   0.000
+
+    precomp lib/Slope/Scale.pm6
+    Stage start      :   0.000
+    
+        precomp lib/Slope/Raw/Types.pm6
+        Stage start      :   0.000
+        [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+        Undeclared routine:
+            re-export used at line 46
+        
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Scale.pm6 (Slope::Scale)
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+    Undeclared routine:
+        re-export used at line 46
+    
+    
+    at /home/cbwood/Projects/p6-Slope/lib/Slope/Scale.pm6 (Slope::Scale):5
+[31m===[0mSORRY![31m===[0m Error while compiling -e
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Types.pm6
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+    Undeclared routine:
+        re-export used at line 46
+    
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Scale.pm6 (Slope::Scale)
+Stage start      :   0.000
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+Undeclared routine:
+    re-export used at line 46
+
+
+at /home/cbwood/Projects/p6-Slope/lib/Slope/Scale.pm6 (Slope::Scale):5
+
+at -e:1
+
+Slope::Scale compile time: 4.13769927
+ === Slope::Item === 
+Stage start      :   0.000
+
+    precomp lib/Slope/Item.pm6
+    Stage start      :   0.000
+    
+        precomp lib/Slope/Raw/Types.pm6
+        Stage start      :   0.000
+        [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+        Undeclared routine:
+            re-export used at line 46
+        
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Item.pm6 (Slope::Item)
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+    Undeclared routine:
+        re-export used at line 46
+    
+    
+    at /home/cbwood/Projects/p6-Slope/lib/Slope/Item.pm6 (Slope::Item):5
+[31m===[0mSORRY![31m===[0m Error while compiling -e
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Types.pm6
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+    Undeclared routine:
+        re-export used at line 46
+    
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Item.pm6 (Slope::Item)
+Stage start      :   0.000
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+Undeclared routine:
+    re-export used at line 46
+
+
+at /home/cbwood/Projects/p6-Slope/lib/Slope/Item.pm6 (Slope::Item):5
+
+at -e:1
+
+Slope::Item compile time: 4.133471
+ === Slope::Legend === 
+Stage start      :   0.000
+
+    precomp lib/Slope/Legend.pm6
+    Stage start      :   0.000
+    
+        precomp lib/Slope/Raw/Types.pm6
+        Stage start      :   0.000
+        [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+        Undeclared routine:
+            re-export used at line 46
+        
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Legend.pm6 (Slope::Legend)
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+    Undeclared routine:
+        re-export used at line 46
+    
+    
+    at /home/cbwood/Projects/p6-Slope/lib/Slope/Legend.pm6 (Slope::Legend):5
+[31m===[0mSORRY![31m===[0m Error while compiling -e
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Types.pm6
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+    Undeclared routine:
+        re-export used at line 46
+    
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Legend.pm6 (Slope::Legend)
+Stage start      :   0.000
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+Undeclared routine:
+    re-export used at line 46
+
+
+at /home/cbwood/Projects/p6-Slope/lib/Slope/Legend.pm6 (Slope::Legend):5
+
+at -e:1
+
+Slope::Legend compile time: 4.2203897
+ === Slope::XYAxis === 
+Stage start      :   0.000
+
+    precomp lib/Slope/XYAxis.pm6
+    Stage start      :   0.000
+    
+        precomp lib/Slope/Raw/Types.pm6
+        Stage start      :   0.000
+        [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+        Undeclared routine:
+            re-export used at line 46
+        
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/XYAxis.pm6 (Slope::XYAxis)
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+    Undeclared routine:
+        re-export used at line 46
+    
+    
+    at /home/cbwood/Projects/p6-Slope/lib/Slope/XYAxis.pm6 (Slope::XYAxis):5
+[31m===[0mSORRY![31m===[0m Error while compiling -e
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Types.pm6
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+    Undeclared routine:
+        re-export used at line 46
+    
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/XYAxis.pm6 (Slope::XYAxis)
+Stage start      :   0.000
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+Undeclared routine:
+    re-export used at line 46
+
+
+at /home/cbwood/Projects/p6-Slope/lib/Slope/XYAxis.pm6 (Slope::XYAxis):5
+
+at -e:1
+
+Slope::XYAxis compile time: 6.383098
+ === Slope::XYScale === 
+Stage start      :   0.000
+
+    precomp lib/Slope/XYScale.pm6
+    Stage start      :   0.000
+    
+        precomp lib/Slope/Raw/Types.pm6
+        Stage start      :   0.000
+        [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+        Undeclared routine:
+            re-export used at line 46
+        
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/XYScale.pm6 (Slope::XYScale)
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+    Undeclared routine:
+        re-export used at line 46
+    
+    
+    at /home/cbwood/Projects/p6-Slope/lib/Slope/XYScale.pm6 (Slope::XYScale):5
+[31m===[0mSORRY![31m===[0m Error while compiling -e
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Types.pm6
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+    Undeclared routine:
+        re-export used at line 46
+    
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/XYScale.pm6 (Slope::XYScale)
+Stage start      :   0.000
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+Undeclared routine:
+    re-export used at line 46
+
+
+at /home/cbwood/Projects/p6-Slope/lib/Slope/XYScale.pm6 (Slope::XYScale):5
+
+at -e:1
+
+Slope::XYScale compile time: 4.21826119
+ === Slope::XYSeries === 
+Stage start      :   0.000
+
+    precomp lib/Slope/XYSeries.pm6
+    Stage start      :   0.000
+    
+        precomp lib/Slope/Raw/Types.pm6
+        Stage start      :   0.000
+        [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+        Undeclared routine:
+            re-export used at line 46
+        
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/XYSeries.pm6 (Slope::XYSeries)
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+    Undeclared routine:
+        re-export used at line 46
+    
+    
+    at /home/cbwood/Projects/p6-Slope/lib/Slope/XYSeries.pm6 (Slope::XYSeries):6
+[31m===[0mSORRY![31m===[0m Error while compiling -e
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Types.pm6
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+    Undeclared routine:
+        re-export used at line 46
+    
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/XYSeries.pm6 (Slope::XYSeries)
+Stage start      :   0.000
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Slope/lib/Slope/Raw/Types.pm6 (Slope::Raw::Types)
+Undeclared routine:
+    re-export used at line 46
+
+
+at /home/cbwood/Projects/p6-Slope/lib/Slope/XYSeries.pm6 (Slope::XYSeries):6
+
+at -e:1
+
+Slope::XYSeries compile time: 6.3537616
+
+Total compile time: 72.1479196s
