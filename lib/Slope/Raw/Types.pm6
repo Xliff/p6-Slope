@@ -2,7 +2,6 @@ use v6.c;
 
 use NativeCall;
 
-use CompUnit::Util :re-export;
 use GLib::Raw::Exports;
 use Pango::Raw::Exports;
 use GIO::Raw::Exports;
@@ -10,7 +9,7 @@ use GDK::Raw::Exports;
 use GTK::Raw::Exports;
 use Slope::Raw::Exports;
 
-my constant forced = 7;
+my constant forced = 18;
 
 unit package Slope::Raw::Types;
 
@@ -44,11 +43,10 @@ need Slope::Raw::Enums;
 need Slope::Raw::Subs;
 
 BEGIN {
-  re-export($_) for
-    |@glib-exports,
-    |@pango-exports,
-    |@gio-exports,
-    |@gdk-exports,
-    |@gtk-exports,
-    |@slope-exports;
+  glib-re-export($_) for |@glib-exports,
+                         |@pango-exports,
+                         |@gio-exports,
+                         |@gdk-exports,
+                         |@gtk-exports,
+                         |@slope-exports;
 }
