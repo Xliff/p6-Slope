@@ -9,7 +9,7 @@ use GDK::Raw::Exports;
 use GTK::Raw::Exports;
 use Slope::Raw::Exports;
 
-my constant forced = 18;
+my constant forced = 27;
 
 unit package Slope::Raw::Types;
 
@@ -27,6 +27,7 @@ need Pango::Raw::Subs;
 need GIO::DBus::Raw::Types;
 need GIO::Raw::Definitions;
 need GIO::Raw::Enums;
+need GIO::Raw::Quarks;
 need GIO::Raw::Structs;
 need GIO::Raw::Subs;
 need GDK::Raw::Definitions;
