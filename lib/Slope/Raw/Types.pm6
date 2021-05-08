@@ -9,17 +9,19 @@ use GDK::Raw::Exports;
 use GTK::Raw::Exports;
 use Slope::Raw::Exports;
 
-my constant forced = 27;
+my constant forced = 92;
 
 unit package Slope::Raw::Types;
 
 need Cairo;
 need GLib::Raw::Definitions;
 need GLib::Raw::Enums;
+need GLib::Raw::Exceptions;
 need GLib::Raw::Object;
 need GLib::Raw::Structs;
-need GLib::Raw::Struct_Subs;
 need GLib::Raw::Subs;
+need GLib::Raw::Struct_Subs;
+need GLib::Roles::Pointers;
 need Pango::Raw::Definitions;
 need Pango::Raw::Enums;
 need Pango::Raw::Structs;
