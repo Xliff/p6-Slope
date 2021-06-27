@@ -1,0 +1,984 @@
+ === GDK::Raw::Exports === 
+Stage start      :   0.000
+Stage parse      :   5.966
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.004
+Stage mast       :   0.022
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+GDK::Raw::Exports compile time: 7.36205082
+ === GIO::Raw::Exports === 
+Stage start      :   0.000
+Stage parse      :   6.013
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.004
+Stage mast       :   0.032
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+GIO::Raw::Exports compile time: 7.60571162
+ === Cairo === 
+Stage start      :   0.000
+Stage parse      :   6.602
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.007
+Stage mast       :   0.007
+Stage mbc        :   0.004
+Stage moar       :   0.000
+
+Cairo compile time: 8.01053466
+ === GDK::Raw::Definitions === 
+Stage start      :   0.000
+Stage parse      :   6.709
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.034
+Stage mbc        :   0.015
+Stage moar       :   0.000
+
+GDK::Raw::Definitions compile time: 8.07525043
+ === GLib::Raw::Exceptions === 
+Stage start      :   0.000
+Stage parse      :   6.327
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.002
+Stage mast       :   0.011
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+GLib::Raw::Exceptions compile time: 7.87900186
+ === GDK::Raw::Enums === 
+Stage start      :   0.000
+Stage parse      :   6.820
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.007
+Stage mast       :   0.042
+Stage mbc        :   0.017
+Stage moar       :   0.000
+
+GDK::Raw::Enums compile time: 8.2230093
+ === GIO::Raw::Definitions === 
+Stage start      :   0.000
+Stage parse      :   6.927
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.002
+Stage mast       :   0.021
+Stage mbc        :   0.002
+Stage moar       :   0.000
+
+GIO::Raw::Definitions compile time: 8.43042074
+ === GLib::Raw::Exports === 
+Stage start      :   0.000
+Stage parse      :   6.508
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.004
+Stage moar       :   0.000
+
+GLib::Raw::Exports compile time: 8.34676966
+ === GDK::Raw::Subs === 
+Stage start      :   0.000
+Stage parse      :   7.011
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.002
+Stage moar       :   0.000
+
+GDK::Raw::Subs compile time: 8.49542477
+ === GIO::Raw::Enums === 
+Stage start      :   0.000
+Stage parse      :   6.908
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.006
+Stage mast       :   0.034
+Stage mbc        :   0.005
+Stage moar       :   0.000
+
+GIO::Raw::Enums compile time: 8.53798042
+ === GLib::Raw::Object === 
+Stage start      :   0.000
+Stage parse      :   7.181
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.060
+Stage mast       :   0.003
+Stage mbc        :   0.002
+Stage moar       :   0.000
+
+GLib::Raw::Object compile time: 8.70313395
+ === GLib::Raw::Struct_Subs === 
+Stage start      :   0.000
+Stage parse      :   6.998
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.003
+Stage moar       :   0.000
+
+GLib::Raw::Struct_Subs compile time: 8.73836723
+ === GDK::Raw::Structs === 
+Stage start      :   0.000
+Stage parse      :   7.676
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.003
+Stage moar       :   0.000
+
+GDK::Raw::Structs compile time: 9.13587226
+ === GIO::DBus::Raw::Types === 
+Stage start      :   0.000
+Stage parse      :   7.862
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.003
+Stage mast       :   0.007
+Stage mbc        :   0.035
+Stage moar       :   0.000
+
+GIO::DBus::Raw::Types compile time: 9.28363853
+ === GIO::Raw::Subs === 
+Stage start      :   0.000
+Stage parse      :   7.710
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.004
+Stage moar       :   0.000
+
+GIO::Raw::Subs compile time: 9.2932122
+ === GIO::Raw::Structs === 
+Stage start      :   0.000
+Stage parse      :   7.679
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.013
+Stage mbc        :   0.003
+Stage moar       :   0.000
+
+GIO::Raw::Structs compile time: 9.37344947
+ === GLib::Raw::Enums === 
+Stage start      :   0.000
+Stage parse      :   7.470
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.023
+Stage mast       :   0.036
+Stage mbc        :   0.008
+Stage moar       :   0.000
+
+GLib::Raw::Enums compile time: 9.323994
+ === GLib::GList === 
+Stage start      :   0.000
+Stage parse      :   8.240
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.014
+Stage mbc        :   0.003
+Stage moar       :   0.000
+
+GLib::GList compile time: 9.68665498
+ === GLib::Raw::Definitions === 
+Stage start      :   0.000
+Stage parse      :   7.952
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.002
+Stage mast       :   0.006
+Stage mbc        :   0.003
+Stage moar       :   0.000
+
+GLib::Raw::Definitions compile time: 9.676493
+ === GIO::Raw::Quarks === 
+Stage start      :   0.000
+Stage parse      :   8.573
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.005
+Stage moar       :   0.000
+
+GIO::Raw::Quarks compile time: 10.31588019
+ === GTK::Raw::Exports === 
+Stage start      :   0.000
+Stage parse      :   6.190
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.004
+Stage mast       :   0.022
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+GTK::Raw::Exports compile time: 8.35572378
+ === GLib::Roles::Pointers === 
+Stage start      :   0.000
+Stage parse      :   7.400
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.002
+Stage moar       :   0.000
+
+GLib::Roles::Pointers compile time: 9.18815181
+ === GLib::Raw::Structs === 
+Stage start      :   0.000
+Stage parse      :   8.060
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.004
+Stage mbc        :   0.004
+Stage moar       :   0.000
+
+GLib::Raw::Structs compile time: 9.93077299
+ === GLib::Raw::Subs === 
+Stage start      :   0.000
+Stage parse      :   7.886
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.005
+Stage mbc        :   0.003
+Stage moar       :   0.000
+
+GLib::Raw::Subs compile time: 9.6701033
+ === GTK::Raw::Definitions === 
+Stage start      :   0.000
+Stage parse      :   7.003
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.004
+Stage mast       :   0.008
+Stage mbc        :   0.003
+Stage moar       :   0.000
+
+GTK::Raw::Definitions compile time: 9.00391066
+ === Method::Also === 
+Stage start      :   0.000
+Stage parse      :   6.400
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.002
+Stage mast       :   0.016
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Method::Also compile time: 8.1066025
+ === GLib::Roles::TypedBuffer === 
+Stage start      :   0.000
+Stage parse      :   7.803
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.003
+Stage moar       :   0.000
+
+GLib::Roles::TypedBuffer compile time: 9.50570394
+ === GLib::Roles::ListData === 
+Stage start      :   0.000
+Stage parse      :   8.033
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.004
+Stage moar       :   0.000
+
+GLib::Roles::ListData compile time: 9.98490419
+ === Pango::Raw::Exports === 
+Stage start      :   0.000
+Stage parse      :   6.394
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.002
+Stage mast       :   0.008
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Pango::Raw::Exports compile time: 8.2951078
+ === GTK::Raw::Enums === 
+Stage start      :   0.000
+Stage parse      :   7.916
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.009
+Stage mast       :   0.018
+Stage mbc        :   0.007
+Stage moar       :   0.000
+
+GTK::Raw::Enums compile time: 10.0757171
+ === Pango::Raw::Definitions === 
+Stage start      :   0.000
+Stage parse      :   6.995
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.002
+Stage mast       :   0.005
+Stage mbc        :   0.003
+Stage moar       :   0.000
+
+Pango::Raw::Definitions compile time: 9.20012058
+ === GLib::Roles::Object === 
+Stage start      :   0.000
+Stage parse      :   9.175
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.006
+Stage mbc        :   0.013
+Stage moar       :   0.000
+
+GLib::Roles::Object compile time: 10.78707405
+ === GTK::Raw::Subs === 
+Stage start      :   0.000
+Stage parse      :   7.399
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+GTK::Raw::Subs compile time: 9.69411405
+ === Pango::Raw::Enums === 
+Stage start      :   0.000
+Stage parse      :   7.129
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.002
+Stage mast       :   0.005
+Stage mbc        :   0.003
+Stage moar       :   0.000
+
+Pango::Raw::Enums compile time: 9.02877645
+ === GTK::Raw::Requisition === 
+Stage start      :   0.000
+Stage parse      :   8.284
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.002
+Stage mbc        :   0.003
+Stage moar       :   0.000
+
+GTK::Raw::Requisition compile time: 10.0228311
+ === GTK::Raw::Structs === 
+Stage start      :   0.000
+Stage parse      :   8.250
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.003
+Stage mbc        :   0.005
+Stage moar       :   0.000
+
+GTK::Raw::Structs compile time: 10.00611533
+ === Pango::Raw::Structs === 
+Stage start      :   0.000
+Stage parse      :   7.607
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.003
+Stage moar       :   0.000
+
+Pango::Raw::Structs compile time: 9.25653325
+ === GTK::DrawingArea === 
+Stage start      :   0.000
+Stage parse      :  11.310
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.013
+Stage moar       :   0.000
+
+GTK::DrawingArea compile time: 13.1512794
+ === Slope::Raw::Exports === 
+Stage start      :   0.000
+Stage parse      :   3.250
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.004
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Slope::Raw::Exports compile time: 4.78307046
+ === GTK::Widget === 
+Stage start      :   0.000
+Stage parse      :  10.822
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.014
+Stage moar       :   0.000
+
+GTK::Widget compile time: 12.86171418
+ === GTK::Window === 
+Stage start      :   0.000
+Stage parse      :  11.314
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.014
+Stage moar       :   0.000
+
+GTK::Window compile time: 13.20342605
+ === Pango::Raw::Subs === 
+Stage start      :   0.000
+Stage parse      :   4.201
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.002
+Stage mbc        :   0.002
+Stage moar       :   0.000
+
+Pango::Raw::Subs compile time: 5.8553075
+ === Slope::Raw::Subs === 
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Subs.pm6
+    Stage start      :   0.000
+    Stage parse      :   2.787
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.008
+    Stage mast       :   0.033
+    Stage mbc        :   0.002
+Stage parse      :   6.460
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.002
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Slope::Raw::Subs compile time: 7.91448243
+ === Slope::Raw::Enums === 
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Enums.pm6
+    Stage start      :   0.000
+    Stage parse      :   2.999
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.008
+    Stage mast       :   0.044
+    Stage mbc        :   0.006
+Stage parse      :   6.560
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Slope::Raw::Enums compile time: 8.1466665
+ === Slope::Raw::Definitions === 
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Definitions.pm6
+    Stage start      :   0.000
+    Stage parse      :   3.377
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.009
+    Stage mast       :   0.028
+    Stage mbc        :   0.005
+Stage parse      :   6.690
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.004
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Slope::Raw::Definitions compile time: 8.2669591
+ === Slope::Raw::Types === 
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Types.pm6
+    Stage start      :   0.000
+    Stage parse      :   3.863
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.001
+    Stage mast       :   0.022
+    Stage mbc        :   0.005
+Stage parse      :   6.080
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.014
+Stage mast       :   0.031
+Stage mbc        :   0.018
+Stage moar       :   0.000
+
+Slope::Raw::Types compile time: 6.68713395
+ === Slope::Raw::XYScale === 
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/XYScale.pm6
+    Stage start      :   0.000
+    Stage parse      :   5.253
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.060
+    Stage mast       :   0.072
+    Stage mbc        :   0.067
+Stage parse      :   9.706
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.002
+Stage moar       :   0.000
+
+Slope::Raw::XYScale compile time: 10.49737805
+ === Slope::Raw::Chart === 
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Chart.pm6
+    Stage start      :   0.000
+    Stage parse      :   5.615
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.070
+    Stage mast       :   0.095
+    Stage mbc        :   0.077
+Stage parse      :  10.267
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Slope::Raw::Chart compile time: 11.07421466
+ === Slope::Raw::Sampler === 
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Sampler.pm6
+    Stage start      :   0.000
+    Stage parse      :   5.987
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.043
+    Stage mast       :   0.097
+    Stage mbc        :   0.105
+Stage parse      :  10.166
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Slope::Raw::Sampler compile time: 11.01598797
+ === Slope::Raw::Drawing === 
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Drawing.pm6
+    Stage start      :   0.000
+    Stage parse      :   5.991
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.047
+    Stage mast       :   0.117
+    Stage mbc        :   0.192
+Stage parse      :  10.566
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.003
+Stage moar       :   0.000
+
+Slope::Raw::Drawing compile time: 11.4295322
+ === Slope::Raw::XYAxis === 
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/XYAxis.pm6
+    Stage start      :   0.000
+    Stage parse      :   6.427
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.048
+    Stage mast       :   0.123
+    Stage mbc        :   0.153
+Stage parse      :  10.822
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.003
+Stage moar       :   0.000
+
+Slope::Raw::XYAxis compile time: 11.67360077
+ === Slope::Raw::XYSeries === 
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/XYSeries.pm6
+    Stage start      :   0.000
+    Stage parse      :   5.947
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.067
+    Stage mast       :   0.100
+    Stage mbc        :   0.095
+Stage parse      :  11.106
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.002
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Slope::Raw::XYSeries compile time: 11.8858778
+ === Slope::Raw::View === 
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/View.pm6
+    Stage start      :   0.000
+    Stage parse      :   5.801
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.038
+    Stage mast       :   0.086
+    Stage mbc        :   0.094
+Stage parse      :  11.305
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.002
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Slope::Raw::View compile time: 12.0399091
+ === Slope::Raw::Item === 
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Item.pm6
+    Stage start      :   0.000
+    Stage parse      :   6.674
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.060
+    Stage mast       :   0.111
+    Stage mbc        :   0.216
+Stage parse      :  11.266
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.002
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Slope::Raw::Item compile time: 12.07165389
+ === Slope::Raw::Figure === 
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Figure.pm6
+    Stage start      :   0.000
+    Stage parse      :   5.782
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.033
+    Stage mast       :   0.071
+    Stage mbc        :   0.051
+Stage parse      :  11.315
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.002
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Slope::Raw::Figure compile time: 12.12691226
+ === Slope::Raw::Legend === 
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Legend.pm6
+    Stage start      :   0.000
+    Stage parse      :   6.894
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.060
+    Stage mast       :   0.131
+    Stage mbc        :   0.173
+Stage parse      :  11.493
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.002
+Stage moar       :   0.000
+
+Slope::Raw::Legend compile time: 12.27948442
+ === Slope::Raw::Scale === 
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Scale.pm6
+    Stage start      :   0.000
+    Stage parse      :   7.454
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.035
+    Stage mast       :   0.080
+    Stage mbc        :   0.095
+Stage parse      :  13.189
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Slope::Raw::Scale compile time: 13.99836134
+ === Slope::Drawing === 
+Stage start      :   0.000
+
+    precomp lib/Slope/Drawing.pm6
+    Stage start      :   0.000
+    Stage parse      :   2.979
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.030
+    Stage mast       :   0.081
+    Stage mbc        :   0.020
+Stage parse      :   6.171
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Slope::Drawing compile time: 7.0526298
+ === Slope::Sampler === 
+Stage start      :   0.000
+
+    precomp lib/Slope/Sampler.pm6
+    Stage start      :   0.000
+    Stage parse      :   3.826
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.023
+    Stage mast       :   0.084
+    Stage mbc        :   0.012
+Stage parse      :   7.076
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Slope::Sampler compile time: 7.9045709
+ === Slope::Figure === 
+Stage start      :   0.000
+
+    precomp lib/Slope/Figure.pm6
+    Stage start      :   0.000
+    Stage parse      :   3.783
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.100
+    Stage mast       :   0.049
+    Stage mbc        :   0.015
+Stage parse      :   6.943
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Slope::Figure compile time: 7.60157901
+ === Slope::View === 
+Stage start      :   0.000
+
+    precomp lib/Slope/View.pm6
+    Stage start      :   0.000
+    Stage parse      :   6.758
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.018
+    Stage mast       :   0.118
+    Stage mbc        :   0.041
+Stage parse      :  10.305
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Slope::View compile time: 10.85286323
+ === Slope::Chart === 
+Stage start      :   0.000
+
+    precomp lib/Slope/Chart.pm6
+    Stage start      :   0.000
+    Stage parse      :   7.255
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.018
+    Stage mast       :   0.139
+    Stage mbc        :   0.040
+Stage parse      :  11.049
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Slope::Chart compile time: 11.57920614
+ === Slope::Scale === 
+Stage start      :   0.000
+
+    precomp lib/Slope/Scale.pm6
+    Stage start      :   0.000
+    Stage parse      :   3.846
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.025
+    Stage mast       :   0.118
+    Stage mbc        :   0.010
+Stage parse      :   7.157
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Slope::Scale compile time: 7.67416986
+ === Slope::Item === 
+Stage start      :   0.000
+
+    precomp lib/Slope/Item.pm6
+    Stage start      :   0.000
+    Stage parse      :   3.866
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.020
+    Stage mast       :   0.118
+    Stage mbc        :   0.010
+Stage parse      :   7.158
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Slope::Item compile time: 7.64286182
+ === Slope::Legend === 
+Stage start      :   0.000
+
+    precomp lib/Slope/Legend.pm6
+    Stage start      :   0.000
+    Stage parse      :   3.315
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.029
+    Stage mast       :   0.109
+    Stage mbc        :   0.016
+Stage parse      :   6.772
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Slope::Legend compile time: 7.27192755
+ === Slope::XYAxis === 
+Stage start      :   0.000
+
+    precomp lib/Slope/XYAxis.pm6
+    Stage start      :   0.000
+    Stage parse      :   3.289
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.030
+    Stage mast       :   0.146
+    Stage mbc        :   0.010
+Stage parse      :   6.889
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Slope::XYAxis compile time: 7.38103654
+ === Slope::XYSeries === 
+Stage start      :   0.000
+
+    precomp lib/Slope/XYSeries.pm6
+    Stage start      :   0.000
+    Stage parse      :   3.533
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.024
+    Stage mast       :   0.136
+    Stage mbc        :   0.009
+Stage parse      :   7.069
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Slope::XYSeries compile time: 7.5624041
+ === Slope::XYScale === 
+Stage start      :   0.000
+
+    precomp lib/Slope/XYScale.pm6
+    Stage start      :   0.000
+    Stage parse      :   3.460
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.025
+    Stage mast       :   0.124
+    Stage mbc        :   0.010
+Stage parse      :   7.109
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Slope::XYScale compile time: 7.61224422
+
+Total compile time: 93.42322202s
