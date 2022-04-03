@@ -1,0 +1,632 @@
+
+Parallel build started for Raku 2022.03.125.g.94.f.2.ba.5.d.4 on MoarVM 2022.03.8.g.35453.e.9.e.1
+ === Slope::Raw::Exports (1/27) === 
+
+Stage start      :   0.000
+Stage parse      :   2.426
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.004
+Stage mast       :   0.013
+Stage mbc        :   0.003
+Stage moar       :   0.000
+
+Slope::Raw::Exports compile time: 3.88169011
+ === Slope::Raw::Subs (2/27) === 
+
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Subs.pm6
+    Stage start      :   0.000
+    Stage parse      :   3.942
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.020
+    Stage mast       :   0.059
+    Stage mbc        :   0.004
+Stage parse      :   7.754
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.002
+Stage mast       :   0.005
+Stage mbc        :   0.002
+Stage moar       :   0.000
+
+Slope::Raw::Subs compile time: 9.20554778
+ === Slope::Raw::Enums (3/27) === 
+
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Enums.pm6
+    Stage start      :   0.001
+    Stage parse      :   4.180
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.012
+    Stage mast       :   0.028
+    Stage mbc        :   0.009
+Stage parse      :   7.990
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.002
+Stage mast       :   0.005
+Stage mbc        :   0.002
+Stage moar       :   0.000
+
+Slope::Raw::Enums compile time: 9.39864755
+ === Slope::Raw::Definitions (4/27) === 
+
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Definitions.pm6
+    Stage start      :   0.000
+    Stage parse      :   5.049
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.047
+    Stage mast       :   0.076
+    Stage mbc        :   0.008
+Stage parse      :   8.130
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.002
+Stage mast       :   0.004
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Slope::Raw::Definitions compile time: 9.59234253
+ === Slope::Raw::Types (5/27) === 
+
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Types.pm6
+    Stage start      :   0.000
+    Stage parse      :   6.574
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.002
+    Stage mast       :   0.016
+    Stage mbc        :   0.003
+Stage parse      :   8.891
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.013
+Stage mast       :   0.023
+Stage mbc        :   0.015
+Stage moar       :   0.000
+
+Slope::Raw::Types compile time: 10.71803213
+ === Slope::Raw::XYAxis (6/27) === 
+
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/XYAxis.pm6
+    Stage start      :   0.004
+    
+        load    lib/Slope/Raw/Types.pm6
+    Stage parse      :   5.920
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.020
+    Stage mast       :   0.029
+    Stage mbc        :   0.035
+Stage parse      :  10.307
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Slope::Raw::XYAxis compile time: 11.7594662
+ === Slope::Raw::Chart (7/27) === 
+
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Chart.pm6
+    Stage start      :   0.001
+    
+        load    lib/Slope/Raw/Types.pm6
+    Stage parse      :   5.782
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.016
+    Stage mast       :   0.021
+    Stage mbc        :   0.022
+Stage parse      :  10.094
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Slope::Raw::Chart compile time: 11.78609357
+ === Slope::Raw::View (8/27) === 
+
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/View.pm6
+    Stage start      :   0.000
+    
+        load    lib/Slope/Raw/Types.pm6
+    Stage parse      :   6.061
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.021
+    Stage mast       :   0.034
+    Stage mbc        :   0.018
+Stage parse      :  10.616
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Slope::Raw::View compile time: 12.061734
+ === Slope::Raw::XYScale (9/27) === 
+
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/XYScale.pm6
+    Stage start      :   0.000
+    
+        load    lib/Slope/Raw/Types.pm6
+    Stage parse      :   6.369
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.015
+    Stage mast       :   0.025
+    Stage mbc        :   0.021
+Stage parse      :  10.687
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Slope::Raw::XYScale compile time: 12.20431002
+ === Slope::Raw::Drawing (10/27) === 
+
+Stage start      :   0.001
+
+    precomp lib/Slope/Raw/Drawing.pm6
+    Stage start      :   0.000
+    
+        load    lib/Slope/Raw/Types.pm6
+    Stage parse      :   7.068
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.021
+    Stage mast       :   0.026
+    Stage mbc        :   0.031
+Stage parse      :  11.316
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Slope::Raw::Drawing compile time: 13.29356237
+ === Slope::Raw::Sampler (11/27) === 
+
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Sampler.pm6
+    Stage start      :   0.000
+    
+        load    lib/Slope/Raw/Types.pm6
+    Stage parse      :   7.783
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.021
+    Stage mast       :   0.019
+    Stage mbc        :   0.021
+Stage parse      :  12.216
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Slope::Raw::Sampler compile time: 14.012698
+ === Slope::Raw::Legend (12/27) === 
+
+Stage start      :   0.001
+
+    precomp lib/Slope/Raw/Legend.pm6
+    Stage start      :   0.000
+    
+        load    lib/Slope/Raw/Types.pm6
+    Stage parse      :   7.822
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.019
+    Stage mast       :   0.028
+    Stage mbc        :   0.036
+Stage parse      :  12.330
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Slope::Raw::Legend compile time: 14.15981722
+ === Slope::Raw::XYSeries (13/27) === 
+
+Stage start      :   0.001
+
+    precomp lib/Slope/Raw/XYSeries.pm6
+    Stage start      :   0.000
+    
+        load    lib/Slope/Raw/Types.pm6
+    Stage parse      :   7.675
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.018
+    Stage mast       :   0.046
+    Stage mbc        :   0.027
+Stage parse      :  12.295
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Slope::Raw::XYSeries compile time: 14.2690189
+ === Slope::Raw::Item (14/27) === 
+
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Item.pm6
+    Stage start      :   0.001
+    
+        load    lib/Slope/Raw/Types.pm6
+    Stage parse      :   8.249
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.023
+    Stage mast       :   0.037
+    Stage mbc        :   0.035
+Stage parse      :  12.832
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Slope::Raw::Item compile time: 14.87357466
+ === Slope::Raw::Figure (15/27) === 
+
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Figure.pm6
+    Stage start      :   0.000
+    
+        load    lib/Slope/Raw/Types.pm6
+    Stage parse      :   8.610
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.022
+    Stage mast       :   0.026
+    Stage mbc        :   0.030
+Stage parse      :  13.531
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Slope::Raw::Figure compile time: 15.41173325
+ === Slope::Drawing (16/27) === 
+
+Stage start      :   0.000
+
+    precomp lib/Slope/Drawing.pm6
+    Stage start      :   0.000
+    
+        load    lib/Slope/Raw/Types.pm6
+    Stage parse      :   8.705
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.036
+    Stage mast       :   0.036
+    Stage mbc        :   0.013
+Stage parse      :  13.465
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Slope::Drawing compile time: 15.45756902
+ === Slope::Raw::Scale (17/27) === 
+
+Stage start      :   0.000
+
+    precomp lib/Slope/Raw/Scale.pm6
+    Stage start      :   0.001
+    
+        load    lib/Slope/Raw/Types.pm6
+    Stage parse      :   9.492
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.025
+    Stage mast       :   0.033
+    Stage mbc        :   0.057
+Stage parse      :  13.948
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Slope::Raw::Scale compile time: 15.8103962
+ === Slope::Sampler (18/27) === 
+
+Stage start      :   0.000
+
+    precomp lib/Slope/Sampler.pm6
+    Stage start      :   0.001
+    
+        load    lib/Slope/Raw/Types.pm6
+    Stage parse      :   9.181
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.030
+    Stage mast       :   0.051
+    Stage mbc        :   0.027
+Stage parse      :  13.809
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Slope::Sampler compile time: 15.815351
+ === Slope::Figure (19/27) === 
+
+Stage start      :   0.000
+
+    precomp lib/Slope/Figure.pm6
+    Stage start      :   0.001
+    
+        load    lib/Slope/Raw/Types.pm6
+    Stage parse      :   9.935
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.024
+    Stage mast       :   0.039
+    Stage mbc        :   0.010
+Stage parse      :  14.194
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Slope::Figure compile time: 16.2050583
+ === Slope::View (20/27) === 
+
+Stage start      :   0.000
+
+    precomp lib/Slope/View.pm6
+    Stage start      :   0.000
+    
+        load    lib/Slope/Raw/Types.pm6
+    
+        load    lib/Slope/Raw/View.pm6
+    
+        load    lib/Slope/Figure.pm6
+    Stage parse      :   9.984
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.025
+    Stage mast       :   0.084
+    Stage mbc        :   0.018
+Stage parse      :  15.071
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.002
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Slope::View compile time: 17.00537574
+ === Slope::Scale (21/27) === 
+
+Stage start      :   0.002
+
+    precomp lib/Slope/Scale.pm6
+    Stage start      :   0.000
+    
+        load    lib/Slope/Raw/Types.pm6
+    
+        load    lib/Slope/Raw/Scale.pm6
+    
+        load    lib/Slope/View.pm6
+    Stage parse      :  10.912
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.033
+    Stage mast       :   0.096
+    Stage mbc        :   0.008
+Stage parse      :  15.972
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.002
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Slope::Scale compile time: 17.91890202
+ === Slope::Chart (22/27) === 
+
+Stage start      :   0.001
+
+    precomp lib/Slope/Chart.pm6
+    Stage start      :   0.000
+    
+        load    lib/Slope/Raw/Types.pm6
+    Stage parse      :  11.298
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.023
+    Stage mast       :   0.090
+    Stage mbc        :   0.018
+Stage parse      :  16.882
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.002
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Slope::Chart compile time: 18.91456282
+ === Slope::Item (23/27) === 
+
+Stage start      :   0.000
+
+    precomp lib/Slope/Item.pm6
+    Stage start      :   0.000
+    
+        load    lib/Slope/Raw/Types.pm6
+    
+        load    lib/Slope/Raw/Item.pm6
+    
+        load    lib/Slope/Figure.pm6
+    
+        load    lib/Slope/Scale.pm6
+    Stage parse      :  12.361
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.026
+    Stage mast       :   0.089
+    Stage mbc        :   0.008
+Stage parse      :  17.462
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.002
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Slope::Item compile time: 19.3630633
+ === Slope::XYAxis (24/27) === 
+
+Stage start      :   0.001
+
+    precomp lib/Slope/XYAxis.pm6
+    Stage start      :   0.000
+    
+        load    lib/Slope/Raw/Types.pm6
+    
+        load    lib/Slope/Item.pm6
+    Stage parse      :  13.153
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.029
+    Stage mast       :   0.081
+    Stage mbc        :   0.007
+Stage parse      :  18.407
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Slope::XYAxis compile time: 20.54968653
+ === Slope::XYScale (25/27) === 
+
+Stage start      :   0.000
+
+    precomp lib/Slope/XYScale.pm6
+    Stage start      :   0.000
+    
+        load    lib/Slope/Raw/Types.pm6
+    
+        load    lib/Slope/Scale.pm6
+    
+        load    lib/Slope/XYAxis.pm6
+    Stage parse      :  13.896
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.027
+    Stage mast       :   0.072
+    Stage mbc        :   0.006
+Stage parse      :  19.072
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Slope::XYScale compile time: 21.03652173
+ === Slope::Legend (26/27) === 
+
+Stage start      :   0.000
+
+    precomp lib/Slope/Legend.pm6
+    Stage start      :   0.000
+    
+        load    lib/Slope/Raw/Types.pm6
+    
+        load    lib/Slope/Raw/Legend.pm6
+    
+        load    lib/Slope/Item.pm6
+    Stage parse      :  13.693
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.028
+    Stage mast       :   0.075
+    Stage mbc        :   0.008
+Stage parse      :  19.011
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Slope::Legend compile time: 21.11215898
+ === Slope::XYSeries (27/27) === 
+
+Stage start      :   0.001
+
+    precomp lib/Slope/XYSeries.pm6
+    Stage start      :   0.000
+    
+        load    lib/Slope/Raw/Types.pm6
+    
+        load    lib/Slope/Item.pm6
+    Stage parse      :  14.340
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.031
+    Stage mast       :   0.102
+    Stage mbc        :   0.008
+Stage parse      :  19.593
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Slope::XYSeries compile time: 21.61912499
+
+Total compile time: 22.00661402s
